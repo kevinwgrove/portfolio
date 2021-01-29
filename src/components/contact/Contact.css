@@ -1,0 +1,54 @@
+#contact-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: left; */
+    width: 50%;
+    margin-top: 20px;
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.email-container {
+    display: flex;
+    justify-content: left;
+    
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.text-white{
+    color: white !important;
+}
+
+.contact-heading {
+
+}
+
+.message-sent {
+    opacity: 0;
+    transition: 1s opacity;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    height: 30px;
+    text-align: center;
+}
+

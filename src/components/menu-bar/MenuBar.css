@@ -1,0 +1,21 @@
+/* #menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+} */
+
+#back-to-top-anchor {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-button {
+    height: 40px;
+    color: white !important;
+}
+
+#Button {
+    color: white
+}

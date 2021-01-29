@@ -1,0 +1,44 @@
+{
+    "project": [
+        {
+            "name":"Knowmad",
+            "address":"https://www.knowmadapp.com/",
+            "sourcecode": "https://gitlab.com/kevinwgrove/nomad",
+            "description":"Knowmad was a capstone project during my time at Kenzie Academy. We were tasked with developing an MVP of an application that students pitched to be developed. Mine turned into Knowmad.  Knowmad was developed as a platform for users to find instructors in their area. Instructors were to create a profile with their background, subjects and rates.  This is an ongoing project, so expect changes over time.",
+            "stack": ["ReactJS", "Google Maps API", "Google Firebase", "Material UI"],
+            "photo": "images/Knowmad.png"
+        },
+        {
+            "name":"ISS Locator",
+            "address": "",
+            "sourcecode": "https://github.com/kenzie-se-q3/iss-locator-kevinwgrove",
+            "description":"So, a little bit of background on this...  This project was meant to utilize the 'turtle' library, but due to some complications with a new MacOS update (I won't go into detail) I was unable to use 'turtle'. So, I ended up using Google Maps API, and A TON of python triple quote strings to build the page itself (don't judge me).  The ISS locator is doing exactly that; locating the ISS. It utilizes 3 different api calls to the ISS API: current location, astronauts list, passover times. Clicking on the ISS or map marker will give you more information. Enjoy!",
+            "stack": ["Python", "Google Maps API", "Triple Quotes", "JavaScript?(Kinda)"],
+            "photo": "images/ISS Locator.png"
+        },
+        {
+            "name":"Connect Four",
+            "address": "https://kevinwgrove.gitlab.io/connect-four/",
+            "sourcecode": "https://gitlab.com/kevinwgrove/connect-four",
+            "description":"This was a group project during my first quarter at Kenzie Academy.  I was the product manager and engineer for this. I did about 75% of the design and 50% of the gaming logic.",
+            "stack": ["JavaScript, Bootstrap"],
+            "photo": "images/Connect-Four.png"
+        },
+        {
+            "name":"Rock/Paper/Scissors",
+            "address": "https://kevinwgrove.gitlab.io/game/",
+            "sourcecode": "https://gitlab.com/kevinwgrove/game",
+            "description":"A simple RPS game against the computer.  This was one of my first logic based gaming programs built in Javascript.",
+            "stack": ["JavaScript, Bootstrap"],
+            "photo": "images/RPS.png"
+        },
+        {
+            "name":"Bigfoot Yancey",
+            "address": "https://www.bigfootyancey.com",
+            "sourcecode": "",
+            "description":"Using the Squarespace platform I manage content, sales, and booking of a musical group I am part of.  Not much programming going on here. Just thought I'd add it to the list.",
+            "stack": ["Squarespace Platform"],
+            "photo": "images/Bigfoot Yancey.png"
+        }
+    ]
+}

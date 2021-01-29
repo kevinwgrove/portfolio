@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react'
+import { Navigation } from "../src/components/navigation/index"
+import { Loading } from "../src/components/loading/index"
+import { Fade } from "@material-ui/core"
 import './App.css';
 
 function App() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>{loading ? (
+      <Loading />
+      ) : (
+      <Fade 
+      in={!loading}
+      timeout={1500}
+      >
+          <Navigation />
+      </Fade>
+      )}
+    </>
   );
 }
 
