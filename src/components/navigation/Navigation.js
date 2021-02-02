@@ -4,7 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AboutMeScreen,
     ContactScreen,
     HomeScreen,
-    PortfolioScreen } from "../../screens";
+    PortfolioScreen,
+    BuildsScreen } from "../../screens";
 import { MenuBar } from "../menu-bar";
 import { Footer } from "../footer"; 
 
@@ -34,6 +35,12 @@ export const Navigation = () => {
                 path="/portfolio"
                 component={PortfolioScreen}
                 />
+
+                <Route 
+                path="/builds"
+                component={BuildsScreen}
+                />
+
             </Switch>
             <Footer />
         </BrowserRouter>

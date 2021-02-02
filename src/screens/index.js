@@ -3,3 +3,4 @@ export * from "./Contact";
 export * from "./Home";
 export * from "./LoadingScreen";
 export * from "./Portfolio";
+export * from "./Builds"

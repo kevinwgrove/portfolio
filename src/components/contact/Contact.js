@@ -6,7 +6,12 @@ import { Fade,
     Typography, 
     makeStyles, 
     withStyles, 
-    Button } from "@material-ui/core";
+    Button,
+    Fab, 
+    useScrollTrigger,
+    Zoom } from "@material-ui/core";
+import { KeyboardArrowUp } from "@material-ui/icons"
+import PropTypes from "prop-types";
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from '../../keys/index'
 import './Contact.css'
 
@@ -53,6 +58,11 @@ const useStyles = makeStyles((theme) => ({
     button: {
         margin: '10px',
         width: '30%'
+    },
+    topAnchor: {
+        position: 'fixed',
+        top: theme.spacing(2),
+        right: theme.spacing(2),
     }
 }));
 
@@ -62,7 +72,36 @@ function CustomTextField(props) {
     return <TextField InputProps={{ classes, disableUnderline: true }} {...props} />;
   }
 
-export const Contact = () => {
+  function ScrollTop(props) {
+    const { children, window } = props;
+    const classes = useStyles();
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+      target: window ? window() : undefined,
+      disableHysteresis: true,
+      threshold: 100,
+    });
+  
+    const handleClick = (event) => {
+      const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+  
+      if (anchor) {
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
+  
+    return (
+      <Zoom in={trigger}>
+        <div onClick={handleClick} role="presentation" className={classes.topAnchor}>
+          {children}
+        </div>
+      </Zoom>
+    );
+  }
+
+export const Contact = (props) => {
     const classes = useStyles()
 
     const [sent, setSent] = useState(false)
@@ -228,6 +267,11 @@ export const Contact = () => {
         
                 </form>
             </div>
+            <ScrollTop {...props}>
+                <Fab color="default" size="small" aria-label="scroll back to top">
+                    <KeyboardArrowUp />
+                </Fab>
+            </ScrollTop>
         </>
     )
 }

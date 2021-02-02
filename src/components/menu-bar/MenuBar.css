@@ -8,14 +8,28 @@
 #back-to-top-anchor {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .menu-button {
     height: 40px;
     color: white !important;
+    margin: 0 20px !important;
 }
 
 #Button {
     color: white
+}
+
+.buttons-containter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-logo {
+
+}
+
+img {
+    width: 60px;
 }

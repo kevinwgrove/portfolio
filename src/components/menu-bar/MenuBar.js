@@ -13,26 +13,31 @@ export const MenuBar = () => {
                 <Toolbar
                     id="back-to-top-anchor"
                 >
-                <Link
-                to="/"
-                style={{
-                    textDecoration: 'none',
-                    color: 'black'
-                }}
-                >
-                    <Grow
-                    in={true}
-                    timeout={1000}
+                    <div
+                        className="home-logo"
                     >
-                        <Button
-                        className='menu-button'
-                        size="large"
+                        <Link
+                        to="/"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'black'
+                        }}
                         >
-                            Home
-                        </Button>
-                    </Grow>
-                </Link>
+                            <Grow
+                            in={true}
+                            timeout={1000}
+                            >
+                                <img 
+                                src="images/KG - White.png" 
+                                alt="Kevin Grove home logo"
+                                />
+                            </Grow>
+                        </Link>
+                    </div>
 
+                    <div
+                        className="buttons-container"
+                    >
                 <Link
                 to="/aboutme"
                 style={{
@@ -72,9 +77,9 @@ export const MenuBar = () => {
                         </Button>
                     </Grow>
                 </Link>
-                
+
                 <Link
-                to="/contact"
+                to="/builds"
                 style={{
                     textDecoration: 'none',
                     color: 'black'
@@ -87,14 +92,35 @@ export const MenuBar = () => {
                         <Button
                         className="menu-button"
                         size="large"
-                        style={{
-                            padding: 20 + 'px'
-                        }}
+                        >
+                            Builds
+                        </Button>
+                    </Grow>
+                </Link>
+                
+                <Link
+                to="/contact"
+                style={{
+                    textDecoration: 'none',
+                    color: 'black'
+                }}
+                >
+                    <Grow
+                    in={true}
+                    timeout={5000}
+                    >
+                        <Button
+                        className="menu-button"
+                        size="large"
+                        // style={{
+                        //     padding: 20 + 'px'
+                        // }}
                         >
                             Contact
                         </Button>
                     </Grow>
                 </Link>
+                </div>
                 </Toolbar>
             </div>
         </>

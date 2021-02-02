@@ -12,13 +12,18 @@
     "edit-json-file": "^1.5.0",
     "emailjs-com": "^2.6.4",
     "fontsource-roboto": "^4.0.0",
+    "mobx": "^6.1.4",
+    "mobx-react": "^7.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-material-ui-carousel": "^2.1.2",
+    "react-read-more-read-less": "^1.0.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-show-more-text": "^1.4.6",
     "react-spinners": "^0.10.4",
     "react-tiny-link": "^3.6.0",
+    "read-more-react": "^1.0.10",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

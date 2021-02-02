@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { PortfolioProvider } from './PortfolioContext';
 
 ReactDOM.render(
   <>
-    <App />
+    <PortfolioProvider>
+      <App />
+    </PortfolioProvider>
   </>,
   document.getElementById('root')
 );
