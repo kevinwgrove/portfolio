@@ -10,7 +10,10 @@ import "./Footer.css";
 export const Footer = () => {
     return (
         <>
-            <div id='footer'>
+            <div
+                id="phantom"
+            >
+                <div id='footer'>
                 {/* <Link
                 to="/"
                 style={{
@@ -82,6 +85,7 @@ export const Footer = () => {
                         </a>
                     </Grow>
                 </Link>
+                </div>
             </div>
         </>
     )

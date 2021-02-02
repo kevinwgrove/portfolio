@@ -1,4 +1,5 @@
-import { EPL_DB_KEY } from "../../../keys/eplID";
+import { EPL_DB_KEY } from "../keys/eplID";
+// import { usePortfolioStore } from "../PortfolioContext";
 
 export const fetchLeagueTable = async () => {
   const result = await fetch(
@@ -56,4 +57,5 @@ export const fetchLeagueTable = async () => {
     return finalTeam;
   });
   return Promise.all(table);
+
 };

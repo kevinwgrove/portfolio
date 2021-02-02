@@ -12,32 +12,24 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 import { fetchLeagueTable, 
     fetchTeamSchedules,
     buildLeagueTable,
-    buildTeamSchedule } from "./helpers/index"
+    buildTeamSchedule } from "../../helpers/index"
 import "./Builds.css";
+import { usePortfolioStore } from "../../PortfolioContext";
 
 export const Builds = () => {
-    const [table, setTable] = useState([])
+    // const [table, setTable] = useState([])
     const [currentTeam, setCurrentTeam] = useState({props: {children: {key: 0}}})
     const [anchorEl, setAnchorEl] = useState(null);
     const [open, setOpen] = useState(false);
     const [placement, setPlacement] = useState();
-
-    useEffect(() => {
-        if(table.length <= 1){
-            helperFetchTable()
-        }
-    }, [])
+    const portfolioStore = usePortfolioStore()
+    const table = portfolioStore.table
 
     useEffect(() => {
         if(table.length > 0) {
             console.log(table)
         }
     }, [table])
-
-    const helperFetchTable = async () => {
-        const result = await fetchLeagueTable()
-        setTable(result)
-    }
 
     const buildTable = () => {
         return (table.sort((a, b) => {

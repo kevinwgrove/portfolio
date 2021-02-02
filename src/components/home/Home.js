@@ -14,17 +14,17 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 export const Home = () => {
     // const portfolioStore = usePortfolioStore()
 
-    // useEffect(() => {
-
-    // }, [])
-
     return (
         <>
-            
-            <Typography>
-                Home
-            </Typography>
-
+            <div
+                id="home-container"
+            >
+                <Typography
+                    variant="h1"
+                >
+                    Home
+                </Typography>
+            </div>
         </>
     )
 }
