@@ -14,22 +14,23 @@
 .menu-button {
     height: 40px;
     color: white !important;
-    margin: 0 20px !important;
+    margin: 0 5px !important;
 }
 
 #Button {
-    color: white
+    color: white;
 }
 
 .buttons-containter {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .home-logo {
-
+    margin: 10px;
+    height: 60px;
 }
 
 img {
-    width: 60px;
+    width: 80px;
 }

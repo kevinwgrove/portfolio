@@ -30,6 +30,7 @@ export const MenuBar = () => {
                                 <img 
                                 src="images/KG - White.png" 
                                 alt="Kevin Grove home logo"
+                                className="home-logo"
                                 />
                             </Grow>
                         </Link>

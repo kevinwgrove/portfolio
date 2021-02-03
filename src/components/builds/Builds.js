@@ -17,19 +17,28 @@ import "./Builds.css";
 import { usePortfolioStore } from "../../PortfolioContext";
 
 export const Builds = () => {
-    // const [table, setTable] = useState([])
+    const [table, setTable] = useState([])
     const [currentTeam, setCurrentTeam] = useState({props: {children: {key: 0}}})
     const [anchorEl, setAnchorEl] = useState(null);
     const [open, setOpen] = useState(false);
     const [placement, setPlacement] = useState();
     const portfolioStore = usePortfolioStore()
-    const table = portfolioStore.table
+    const mobxTable = portfolioStore.table
 
     useEffect(() => {
-        if(table.length > 0) {
-            console.log(table)
+        if(mobxTable.length > 0) {
+            console.log("this", mobxTable)
+            setTable(mobxTable)
+        } else {
+            console.log(mobxTable)
+            helperFetchTable()
         }
-    }, [table])
+    }, [])
+
+    const helperFetchTable = async () => {
+        const result = await fetchLeagueTable()
+        setTable(result)
+    }
 
     const buildTable = () => {
         return (table.sort((a, b) => {
@@ -109,7 +118,7 @@ export const Builds = () => {
         <>
             <Fade 
             in={true}
-            timeout={2000}
+            timeout={1000}
             >
                 <div id="builds-container">
                     <div

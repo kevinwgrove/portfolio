@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Noto+Sans+KR:wght@100;300;400&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Roboto+Mono:wght@100;200;300;400&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+
 #contact-container {
     height: 100%;
     display: flex;
@@ -38,9 +41,6 @@
     color: white !important;
 }
 
-.contact-heading {
-
-}
 
 .message-sent {
     opacity: 0;
@@ -52,3 +52,24 @@
     text-align: center;
 }
 
+
+.roboto {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+.noto-sans {
+    font-family: "Noto Sans KR", sans-serif !important;
+    font-weight: 100 !important;
+}
+
+.jura {
+    font-family: 'Jura', sans-serif !important;
+}
+
+.nunito {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif !important;
+}

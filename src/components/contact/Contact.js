@@ -156,10 +156,25 @@ export const Contact = (props) => {
                             marginBottom: '10px'
                         }}
                     >
-                        Contact Form
+                        Contact Form 
                     </Typography>
+
                 </Fade>
 
+                
+                
+                    <Typography
+                        className="text-white roboto"
+                    >
+                        You can always call me @ <a href="tel:+13176279559" className="text-white">(317) 627-9559</a>
+                    </Typography>
+
+                    <Typography
+                        className="text-white roboto"
+                    >
+                        Our shoot me a <a href="sms://+13176279559" className="text-white roboto">text</a>
+                    </Typography>
+                
                 {   sent ? 
                     (sentMessage()) :
                     (
