@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 #epl-table {
@@ -92,6 +92,12 @@
     text-align: center !important;
 }
 
+.team-position-header {
+    width: 95px;
+    margin: 5px 10px !important;
+    text-align: left;
+}
+
 .team-badge {
     height: 35px;
     width: 35px;
@@ -134,8 +140,8 @@
 
 .popper-window {
     position: absolute !important;
-    margin-left: -355px !important;
-    width: 537px !important;
+    margin-left: -350px !important;
+    width: 525px !important;
     height: auto !important;
     background-color: #303133 !important;
     display: flex;

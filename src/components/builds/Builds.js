@@ -57,39 +57,10 @@ export const Builds = () => {
 
                                 {currentTeam}
 
-                                {/* <img 
-                                src={currentTeam.info.strStadiumThumb} 
-                                alt={currentTeam.name + " stadium"}
-                                className="popper-team-stadium"
-                                />
-
-                                <Typography
-                                    className="text-white stadium-info"
-                                    variant="h6"
-                                >
-                                    {currentTeam.info.strStadium}
-                                </Typography>
-
-                                <Typography
-                                    className="text-white"
-                                    variant="subtitle2"
-                                >
-                                    <ReactReadMoreReadLess
-                                        charLimit={200}
-                                        readMoreText={"Read more"}
-                                        readLessText={"Show less"}
-                                        readMoreClassName="read-more-less--more"
-                                        readLessClassName="read-more-less--less"
-                                    >
-                                        {currentTeam.info.strDescriptionEN}
-                                    </ReactReadMoreReadLess>
-                                </Typography> */}
                             </Paper>
                         </Fade>
                         )}
                     </Popper>
-
-                    
                             <IconButton
                                 id={team.teamid}
                                 className="team-button"
@@ -117,10 +88,6 @@ export const Builds = () => {
                 </>
             )
         }))
-    }
-
-    const getTeamInfo = (team) => {
-        setCurrentTeam(team)
     }
 
     const handleClick = (newPlacement, team) => (event) => {
@@ -156,19 +123,17 @@ export const Builds = () => {
                         <>
                         <div
                             className="info-header text-white"
-                        >
+                            >
+                            {/* <div
+                                id="phantom"
+                            > */}
 
                             <Typography
-                                className="team-position"
+                                className="team-position-header"
                             >
                                 Pos.
                             </Typography>
                                 
-                            <div
-                                style={{
-                                    width: "40px"
-                                }}
-                            />
 
                             <Typography
                                 className="team-name"
@@ -200,8 +165,11 @@ export const Builds = () => {
                                 Pts.
                             </Typography>
 
+                    {/* </div> */}
                         </div>
-                        {buildTable()}
+                        {
+                            buildTable()
+                        }
                         </>
                         :
                         <>
