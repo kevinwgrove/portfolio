@@ -1,205 +1,220 @@
-import React, { useEffect, useState, useReducer } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, 
     Fade, 
     IconButton, 
     Typography,
     Popper,
-    Paper } from "@material-ui/core";
-import { Close, KeyboardArrowDown } from "@material-ui/icons"
+    Paper, 
+    Button} from "@material-ui/core";
+import { ArrowForwardIos, ArrowForward, ArrowBackIos } from "@material-ui/icons"
 import { EPL_DB_KEY } from "../../keys/index";
 import { BounceLoader } from "react-spinners";
 import ReactReadMoreReadLess from "react-read-more-read-less";
-import { fetchLeagueTable, 
-    fetchTeamSchedules,
+import { fetchLeagueTable,
+    fetchLeague, 
     buildLeagueTable,
     buildTeamSchedule } from "../../helpers/index"
 import "./Builds.css";
 import { usePortfolioStore } from "../../PortfolioContext";
+import { EPLTable } from "./build-components/epl-table/index"
+import { Link } from "react-router-dom"
+
 
 export const Builds = () => {
-    const [table, setTable] = useState([])
-    const [currentTeam, setCurrentTeam] = useState({props: {children: {key: 0}}})
-    const [anchorEl, setAnchorEl] = useState(null);
-    const [open, setOpen] = useState(false);
-    const [placement, setPlacement] = useState();
+    const [build, setBuild] = useState(true)
+    const [epl, setEpl] = useState(false)
+    const [league, setLeague] = useState({})
+    
     const portfolioStore = usePortfolioStore()
-    const mobxTable = portfolioStore.table
+    const mobxLeague = portfolioStore.league
 
     useEffect(() => {
-        if(mobxTable.length > 0) {
-            console.log("this", mobxTable)
-            setTable(mobxTable)
+        if(mobxLeague.length > 0) {
+            console.log(mobxLeague[0].strBadge)
+            setLeague(mobxLeague[0])
         } else {
-            console.log(mobxTable)
-            helperFetchTable()
+            helperFetchLeague()
         }
+        buildBOTD()
     }, [])
 
-    const helperFetchTable = async () => {
-        const result = await fetchLeagueTable()
-        setTable(result)
+    const helperFetchLeague = async () => {
+        const result = await fetchLeague()
+        console.log(result[0])
+        setLeague(result[0])
     }
 
-    const buildTable = () => {
-        return (table.sort((a, b) => {
-            return a.position - b.position
-        }).map((team) => {
-            return (
-                <>
-                <div
-                    key={team.teamid}
-                    className="team-info text-white"
-                >
-
-                    {buildLeagueTable(team)}
-
-                    <Popper 
-                    open={open} 
-                    anchorEl={anchorEl} 
-                    placement={placement} 
-                    transition>
-                        {({ TransitionProps }) => (
-                        <Fade {...TransitionProps} timeout={350}>
-                            <Paper
-                                className="popper-window"
-                            >
-
-                                {currentTeam}
-
-                            </Paper>
-                        </Fade>
-                        )}
-                    </Popper>
-                            <IconButton
-                                id={team.teamid}
-                                className="team-button"
-                                onClick={handleClick('bottom-end', team)}
-                            >
-                                { team.teamid === currentTeam.props.children.key && open ?
-                                    <Close 
-                                    style={{
-                                        height: "15px",
-                                        width:  "15px",
-                                        color: "white"
-                                    }}
-                                    /> :
-                                    <KeyboardArrowDown 
-                                        style={{
-                                            height: "15px",
-                                            width:  "15px",
-                                            color: "white"
-                                        }}
-                                    />
-                                }
-                            </IconButton>
-
-                </div>
-                </>
-            )
-        }))
+    const buildBOTD = () => {
+        fetch('bird-info.json', {
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+             }
+        }).then((res) => {
+            return res.json()
+        }).then((result) => {
+            console.log(result)
+        })
     }
 
-    const handleClick = (newPlacement, team) => (event) => {
-        console.log(currentTeam.props.children.key)
-        event.preventDefault()
-        const result = buildTeamSchedule(team, table)
-        setCurrentTeam(team)
-        if(event.currentTarget.id === currentTeam.props.children.key){
-            setOpen((prev) => placement !== newPlacement || !prev);
-        } else {
-            setOpen(() => placement !== newPlacement || true)
-        }
-        setAnchorEl(event.currentTarget);
-        setPlacement(newPlacement);
-        setCurrentTeam(result)
-    };
-    
     return (
         <>
             <Fade 
             in={true}
             timeout={1000}
             >
+
                 <div id="builds-container">
-                    <div
-                        id="epl-container"
+
+                    <Typography
+                        id='builds-p'
+                        className='text-white noto-sans'
+                    >
+                        This page is dedicated to demonstrate my knowledge on building complex, component based applications using different API calls. You also get to see some of the hobbies I enjoy in my free time. Enjoy!!!
+                    </Typography>
+
+                    <Fade
+                    in={true}
+                    timeout={2000}
                     >
                     <div
-                        id="epl-table"
+                        id="epl-card"
+                        className='builds-card'
                     >
-                    {
-                        table.length == 20 ?
-                        <>
+                        <Typography
+                            className='text-white jura'
+                            id='epl-title'
+                        >
+                            English Premier League Table
+                        </Typography>
                         <div
-                            className="info-header text-white"
+                            className="api-container"
+                        >
+                            <div
+                                className='logos-container'
                             >
-                            {/* <div
-                                id="phantom"
-                            > */}
-
-                            <Typography
-                                className="team-position-header"
-                            >
-                                Pos.
-                            </Typography>
-                                
-
-                            <Typography
-                                className="team-name"
-                            >
-                                Team
-                            </Typography>
-
-                            <Typography
-                                className="team-wins"
-                            >
-                                W
-                            </Typography>
-
-                            <Typography
-                                className="team-draws"
-                            >
-                                D
-                            </Typography>
-
-                            <Typography
-                                className="team-losses"
-                            >
-                                L
-                            </Typography>
-
-                            <Typography
-                                className="team-points"
-                            >
-                                Pts.
-                            </Typography>
-
-                    {/* </div> */}
-                        </div>
-                        {
-                            buildTable()
-                        }
-                        </>
-                        :
-                        <>
-                            <div id="loader">
-                                <BounceLoader
-                                    id='loader'
-                                    color={'#FFFFFF'}
-                                    size={120}
+                                <img 
+                                src="images/the_sports_db.png" 
+                                alt="The Sports DB Logo"
+                                id="sports-db"       
                                 />
-                                <Typography
-                                    variant="h4"
-                                    className="text-white"
-                                >
-                                    Loading...
-                                </Typography>
+
+                                <ArrowForward 
+                                    className='arrow-forward'
+                                />
+
+                                <img 
+                                src={league.strBadge} 
+                                alt="EPL Badge"
+                                id="league-badge"
+                                />
                             </div>
-                        </>
-                    }
+
+                            <div
+                                className='info-container-builds'
+                            >
+                                <Typography
+                                    className="text-white roboto roboto-text-builds"
+                                >
+                                    TheSportsDB is a community database of sports artwork and data that I used to build a league table. It's not the most accurate, but it's affordable and it does the job, so I can't complain. 
+                                </Typography>
+
+
+                                <Link
+                                to="/epltable"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'black'
+                                }}
+                                >
+                                    <Button
+                                        className='button-builds'
+                                        variant='contained'
+                                    >
+                                        <ArrowForwardIos 
+                                            className="launch-icon"
+                                        />
+                                    </Button>
+                                </Link>
+                            </div>
+
+                        </div>
+
                     </div>
+                    
+                    </Fade>
+
+                    <Fade
+                    in={true}
+                    timeout={2000}
+                    >
+                    <div
+                        id="epl-card"
+                        className='builds-card'
+                    >
+                        <Typography
+                            className='text-white jura'
+                            id='epl-title'
+                        >
+                            Bird Of The Day
+                        </Typography>
+                        <div
+                            className="api-container"
+                        >
+                            <div
+                                className='logos-container'
+                            >
+                                <img 
+                                src="images/ebird.webp" 
+                                alt="eBird Logo"
+                                id="ebird-logo"       
+                                />
+
+                                <ArrowForward 
+                                    className='arrow-forward-builds'
+                                />
+
+                                <img 
+                                src='images/cornell-lab.jpg' 
+                                alt="Cornell Lab of Ornithology logo"
+                                id="cornell-lab-logo"
+                                />
+                            </div>
+
+                            <div
+                                className='info-container-builds'
+                            >
+                                <Typography
+                                    className="text-white roboto roboto-text-builds"
+                                >
+                                    TheSportsDB is a community database of sports artwork and data that I used to build a league table. It's not the most accurate, but it's affordable and it does the job, so I can't complain. 
+                                </Typography>
+
+
+                                {/* <Link
+                                to="/epltable"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'black'
+                                }}
+                                > */}
+                                    <Button
+                                        className='button-builds'
+                                        variant='contained'
+                                    >
+                                        <ArrowForwardIos 
+                                            className="arrow-forward-ios-builds"
+                                        />
+                                    </Button>
+                                {/* </Link> */}
+                            </div>
+
+                        </div>
+
                     </div>
+                    </Fade>
                 </div>
+
             </Fade>
             
         </>

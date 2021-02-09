@@ -1,0 +1,8 @@
+{
+    "name":"Bigfoot Yancey",
+    "address": "https://www.bigfootyancey.com",
+    "sourcecode": "",
+    "description":"Using the Squarespace platform I manage content, sales, and booking of a musical group I am part of.  Not much programming going on here. Just thought I'd add it to the list.",
+    "stack": ["Squarespace Platform"],
+    "photo": "images/Bigfoot Yancey.png"
+}

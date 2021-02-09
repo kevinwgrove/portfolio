@@ -59,3 +59,16 @@ export const fetchLeagueTable = async () => {
   return Promise.all(table);
 
 };
+
+export const fetchLeague = async () => {
+  const result = await fetch("https://thesportsdb.p.rapidapi.com/lookupleague.php?id=4328", {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": EPL_DB_KEY,
+      "x-rapidapi-host": "thesportsdb.p.rapidapi.com"
+    }
+  })
+  const response = await result.json()
+  console.log(response.leagues)
+  return Promise.all(response.leagues)
+}

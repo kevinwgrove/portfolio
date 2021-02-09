@@ -79,6 +79,8 @@ export const Portfolio = (props) => {
                 setProjects(value)
             }
         })
+
+        
     }
     
     const triggerChange = (index) => {

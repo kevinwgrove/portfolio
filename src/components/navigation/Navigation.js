@@ -5,7 +5,8 @@ import { AboutMeScreen,
     ContactScreen,
     HomeScreen,
     PortfolioScreen,
-    BuildsScreen } from "../../screens";
+    BuildsScreen,
+    EPLTableScreen } from "../../screens";
 import { MenuBar } from "../menu-bar";
 import { Footer } from "../footer"; 
 
@@ -39,6 +40,11 @@ export const Navigation = () => {
                 <Route 
                 path="/builds"
                 component={BuildsScreen}
+                />
+
+                <Route
+                path="/epltable"
+                component={EPLTableScreen}
                 />
 
             </Switch>

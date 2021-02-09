@@ -31,14 +31,6 @@
             "description":"A simple RPS game against the computer.  This was one of my first logic based gaming programs built in Javascript.",
             "stack": ["JavaScript, Bootstrap"],
             "photo": "images/RPS.png"
-        },
-        {
-            "name":"Bigfoot Yancey",
-            "address": "https://www.bigfootyancey.com",
-            "sourcecode": "",
-            "description":"Using the Squarespace platform I manage content, sales, and booking of a musical group I am part of.  Not much programming going on here. Just thought I'd add it to the list.",
-            "stack": ["Squarespace Platform"],
-            "photo": "images/Bigfoot Yancey.png"
         }
     ]
 }

@@ -4,7 +4,9 @@ import { Card,
     Button, 
     Typography,
     Zoom, 
-    Grow} from "@material-ui/core";
+    Grow,
+    IconButton
+} from "@material-ui/core";
 import { Close, Email, Call, Textsms } from "@material-ui/icons"
 import './Home.css';
 import { BounceLoader } from "react-spinners";
@@ -12,8 +14,22 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 
 
 export const Home = () => {
-
     const [contact, setContact] = useState(false)
+
+    const sendEmail = () => {
+        const link = "mailto:kevinwilsongrove@gmail.com"
+        window.location.href = link
+    }
+
+    const sendText = () => {
+        const link = "sms://+13176279559"
+        window.location.href = link
+    }
+
+    const makeCall = () => {
+        const link = "tel:+13176279559"
+        window.location.href = link
+    }
 
     return (
         <>
@@ -80,18 +96,30 @@ export const Home = () => {
                 <div
                     id="contact-button-container"
                 >
-                    <Button
-                        className="text-white button-home"
-                        variant="contained"
-                        onClick={() => setContact(!contact)}
-                    >
+                    
                         {
                             !contact ?
-                            "Get in touch"
+                            <Button
+                                className="text-white button-home"
+                                variant="contained"
+                                onClick={() => setContact(true)}
+                            >
+                            Get in touch
+                            </Button>
                             :
-                            <Close/>
+                            <IconButton
+                                className="text-white button-home close-button"
+                                variant="contained"
+                                onClick={() => setContact(false)}
+                            >
+                                <Close
+                                    style={{
+                                        // padding: "0"
+                                    }}
+                                />
+                            </IconButton>
                         }
-                    </Button>
+                    
                 </div>
 
 
@@ -106,55 +134,73 @@ export const Home = () => {
                         <div
                             id="phantom-buttons-container"
                         >
-                            <a href="mailto:kevinwilsongrove@gmail.com"
+                            <a
                                 style={{
                                     color: "white",
-                                    textDecoration: "none"
+                                    textDecoration: "none",
+                                    width: "100%",
+                                    height: "auto",
+                                    display:"flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
                                 }}
                             >
                                 <Button
                                     className="text-white phantom-button nunito"
                                     variant="contained"
+                                    onClick={sendEmail}
                                 >
                                     <Email 
                                         style={{
-                                            fontSize: "300%"
+                                            fontSize: "300%",
                                         }}
                                     />
                                 </Button>
                             </a>
 
-                            <a href="tel:+13176279559"
+                            <a
                                 style={{
                                     color: "white",
-                                    textDecoration: "none"
+                                    textDecoration: "none",
+                                    width: "100%",
+                                    height: "auto",
+                                    display:"flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
                                 }}
                             >
                                 <Button
                                 className="text-white phantom-button nunito"
                                 variant="contained"
+                                onClick={makeCall}
                                 >
                                     <Call
                                         style={{
-                                            fontSize: "300%"
+                                            fontSize: "300%",
                                         }}
                                     />
                                 </Button>
                             </a>
 
-                            <a href="sms://+13176279559"
+                            <a
                                 style={{
                                     color: "white",
-                                    textDecoration: "none"
+                                    textDecoration: "none",
+                                    width: "100%",
+                                    height: "auto",
+                                    display:"flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
                                 }}
                             >
                                 <Button
                                 className="text-white phantom-button nunito"
                                 variant="contained"
+                                onClick={sendText}
                                 >
                                     <Textsms 
                                         style={{
-                                            fontSize: "300%"
+                                            fontSize: "300%",
                                         }}
                                     />
                                 </Button>
