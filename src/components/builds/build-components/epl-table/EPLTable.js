@@ -12,7 +12,7 @@ import { Fade,
     Paper, 
     Grow,
     Button} from "@material-ui/core";
-import { Close, KeyboardArrowDown, ArrowBackIos } from "@material-ui/icons"
+import { Close, KeyboardArrowDown, ArrowBackIos, ChevronLeft } from "@material-ui/icons"
 // import ReactReadMoreReadLess from "react-read-more-read-less";
 import { Link } from "react-router-dom"
 
@@ -141,7 +141,7 @@ export const EPLTable = () => {
                             variant='contained'
                             id="back-icon-epl"
                         >
-                            <ArrowBackIos 
+                            <ChevronLeft 
                                 className="back-icon"
                             />
                         </Button>

@@ -73,6 +73,7 @@ export const Portfolio = (props) => {
              }
         }
         ).then(function(res) {
+            console.log(res)
             return res.json()
         }).then(function(myJson) {
             for (const [key, value] of Object.entries(myJson)) {
@@ -146,11 +147,11 @@ export const Portfolio = (props) => {
             </Typography>
 
             <div
-                id="carousel-container"
+                id="portfolio-carousel-container"
             >
             <Carousel
                 autoPlay={false}
-                id="carousel"
+                id="portfolio-carousel"
                 animation={'slide'}
                 timeout={750}
                 swipe={true}
@@ -161,6 +162,7 @@ export const Portfolio = (props) => {
             {
                 projects ?
                 projects.map((item)=>{
+                    console.log(item.photo)
                 return(
                     <>
                         <div

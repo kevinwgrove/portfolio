@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import './Adventures.css'
-import { Typography } from "@material-ui/core";
+import React from 'react'
+import './Hobbies.css'
+import { Typography } from '@material-ui/core'
 
-export const Adventures = () => {
+export const Hobbies = () => {
     return (
         <>
             {/* <Fade
@@ -17,7 +17,7 @@ export const Adventures = () => {
                             variant='h4'
                             className='text-white background-heading noto-sans-about-me'
                         >
-                            Adventures
+                            Hobbies
                         </Typography>
 
                         <div

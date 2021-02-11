@@ -6,7 +6,7 @@ import { Card,
     Popper,
     Paper, 
     Button} from "@material-ui/core";
-import { ArrowForwardIos, ArrowForward, ArrowBackIos } from "@material-ui/icons"
+import { ArrowForwardIos, ArrowForward, ChevronRight } from "@material-ui/icons"
 import { EPL_DB_KEY } from "../../keys/index";
 import { BounceLoader } from "react-spinners";
 import ReactReadMoreReadLess from "react-read-more-read-less";
@@ -100,7 +100,7 @@ export const Builds = () => {
                                 />
 
                                 <ArrowForward 
-                                    className='arrow-forward'
+                                    className='arrow-forward-builds'
                                 />
 
                                 <img 
@@ -131,8 +131,8 @@ export const Builds = () => {
                                         className='button-builds'
                                         variant='contained'
                                     >
-                                        <ArrowForwardIos 
-                                            className="launch-icon"
+                                        <ChevronRight 
+                                            className="arrow-forward-ios-builds"
                                         />
                                     </Button>
                                 </Link>
@@ -156,7 +156,7 @@ export const Builds = () => {
                             className='text-white jura'
                             id='epl-title'
                         >
-                            Bird Of The Day
+                            Bird Of The Day (a.k.a. "Bird Nerd")
                         </Typography>
                         <div
                             className="api-container"
@@ -187,7 +187,7 @@ export const Builds = () => {
                                 <Typography
                                     className="text-white roboto roboto-text-builds"
                                 >
-                                    TheSportsDB is a community database of sports artwork and data that I used to build a league table. It's not the most accurate, but it's affordable and it does the job, so I can't complain. 
+                                    This build is under construction. Please be patient, awesomeness is soon to come. 
                                 </Typography>
 
 
@@ -202,7 +202,7 @@ export const Builds = () => {
                                         className='button-builds'
                                         variant='contained'
                                     >
-                                        <ArrowForwardIos 
+                                        <ChevronRight 
                                             className="arrow-forward-ios-builds"
                                         />
                                     </Button>

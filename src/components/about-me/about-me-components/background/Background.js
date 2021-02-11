@@ -1,14 +1,63 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Background.css"
 import { Fade,
     Grow,
-    Typography } from '@material-ui/core'
-import AliceCarousel from 'react-alice-carousel'
-import "react-alice-carousel/lib/alice-carousel.css";
+    Typography,
+    Button } from '@material-ui/core'
+import { ChevronLeft, ChevronRight } from '@material-ui/icons'
+import Carousel from 'react-material-ui-carousel'
 
 export const Background = () => {
-    
+    const [index, setIndex] = useState()
 
+    // const backgroundCarousel = useRef(null)
+    // const backgroundSlider = useRef(null)
+
+    // let direction = 1
+
+    // const photos = [
+    //     'bar-iberre.jpg',
+    //     'bar-iberre2.jpg',
+    //     'bilbao.jpg',
+    //     'cincy-bfy.jpg',
+    //     'gernika.jpg',
+    //     'Palladium copy.jpg'
+    // ]
+
+    // const backgroundPrev = (e) => {
+    //     e.stopPropagation()
+    //     if (direction === 1) {
+    //         backgroundSlider.current.appendChild(backgroundSlider.current.firstElementChild)
+    //     }
+    //     console.log("Slider Background: ", backgroundSlider.current)
+    //     console.log("Carousel Background: ", backgroundCarousel.current)
+    //     direction = -1
+    //     backgroundCarousel.current.style.justifyContent = 'flex-end'
+    //     backgroundSlider.current.style.transform = 'translate(33%)'
+    // }
+
+    // const backgroundNext = (e) => {
+    //     e.stopPropagation()
+    //     if (direction === -1) {
+    //         backgroundSlider.current.prepend(backgroundSlider.current.lastElementChild)
+    //     }
+    //     console.log("Slider Background: ", backgroundSlider.current)
+    //     console.log("Carousel Background: ", backgroundCarousel.current)
+    //     direction = 1
+    //     backgroundCarousel.current.style.justifyContent = 'flex-start'
+    //     backgroundSlider.current.style.transform = 'translate(-33%)'
+    // }
+
+    // const backgroundAppend = () => {
+    //     if (direction === 1) { 
+    //         backgroundSlider.current.appendChild(backgroundSlider.current.firstElementChild)
+    //     } else if (direction === -1) { 
+    //         backgroundSlider.current.prepend(backgroundSlider.current.lastElementChild)
+    //     }
+    //     backgroundSlider.current.style.transition = 'none'
+    //     backgroundSlider.current.style.transform = 'translate(0)'
+    //     setTimeout(() => {backgroundSlider.current.style.transition = 'all 0.75s'})
+    // }
 
     return (
         <>
@@ -28,7 +77,7 @@ export const Background = () => {
                         </Typography>
 
                         <div
-                            id='background-body'
+                            id='background-container'
                         >
                             <Typography
                                 className='text-white nunito'
@@ -87,7 +136,37 @@ export const Background = () => {
 
                                 </div>
                             </Typography>
-                            
+
+                        <div
+                            id='background-carousel-container'
+                        >
+                            <Carousel
+                                autoPlay={false}
+                                id="background-carousel"
+                                animation={'slide'}
+                                timeout={1000}
+                                swipe={true}
+                                navButtonsAlwaysVisible={false}
+                                index={0}
+                                onChange={(index) => setIndex(index)}
+                            >
+                                <div>
+                                            1
+                                        </div>
+                                        <div>
+                                            2
+                                        </div>
+                                        <div>
+                                            3
+                                        </div>
+                                        <div>
+                                            4
+                                        </div>
+                                        <div>
+                                            5
+                                        </div>
+                            </Carousel>
+                        </div>
                         </div>
 
                     </div>
@@ -96,3 +175,72 @@ export const Background = () => {
         </>
     )
 }
+
+
+
+
+
+
+{/* <div 
+                                id="background-carousel-container"
+                            >
+                                <div 
+                                    className="carousel-background"
+                                    ref={backgroundCarousel}
+                                >
+                                    <div 
+                                        className="slider-background"
+                                        onTransitionEnd={backgroundAppend}
+                                        ref={backgroundSlider}
+                                    >
+                                        <div>
+                                            1
+                                        </div>
+                                        <div>
+                                            2
+                                        </div>
+                                        <div>
+                                            3
+                                        </div>
+                                        <div>
+                                            4
+                                        </div>
+                                        <div>
+                                            5
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    id='background-controls'
+                                >
+                                    <div
+                                        className='arrow-span-background arrow-left-background'
+                                    >
+                                        <Button
+                                            className='button-background'
+                                            variant='contained'
+                                            onClick={(event) => backgroundPrev(event)}
+                                        >
+                                            <ChevronLeft 
+                                                className="arrow-back-background"
+                                            />
+                                        </Button>
+
+                                    </div>
+
+                                    <div
+                                        className='arrow-span-background arrow-right-background'
+                                    >
+                                        <Button
+                                            className='button-background'
+                                            variant='contained'
+                                            onClick={(event) => backgroundNext(event)}
+                                        >
+                                            <ChevronRight 
+                                                className="arrow-forward-background"
+                                            />
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div> */}

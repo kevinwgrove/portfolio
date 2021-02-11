@@ -123,7 +123,6 @@ export const Home = () => {
                 </div>
 
 
-            </div>
                     {
                         contact ?
                         <>
@@ -146,7 +145,7 @@ export const Home = () => {
                                 }}
                             >
                                 <Button
-                                    className="text-white phantom-button nunito"
+                                    className="text-white phantom-button"
                                     variant="contained"
                                     onClick={sendEmail}
                                 >
@@ -170,7 +169,7 @@ export const Home = () => {
                                 }}
                             >
                                 <Button
-                                className="text-white phantom-button nunito"
+                                className="text-white phantom-button"
                                 variant="contained"
                                 onClick={makeCall}
                                 >
@@ -194,7 +193,7 @@ export const Home = () => {
                                 }}
                             >
                                 <Button
-                                className="text-white phantom-button nunito"
+                                className="text-white phantom-button"
                                 variant="contained"
                                 onClick={sendText}
                                 >
@@ -212,6 +211,7 @@ export const Home = () => {
                         :
                         null
                     }
+            </div>
         </>
     )
 }

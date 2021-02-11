@@ -1,53 +1,51 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./AboutMe.css"
 import { Button, 
     Fade,
     Grow,
     Typography } from '@material-ui/core'
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import { Background, Adventures } from "./about-me-components/index";
+import { ArrowBackIos, ArrowForwardIos, ChevronLeft, ChevronRight } from "@material-ui/icons";
+import { Background, Adventures, Hobbies } from "./about-me-components/index";
 
 
 
 export const AboutMe = () => {
-    const slider = document.querySelector('.slider-about-me')
-    // const prev = document.querySelector('.arrow-left-about-me')
-    // const next = document.querySelector('.arrow-right-about-me')
-    const carousel = document.querySelector('.carousel-about-me')
+    const slider = useRef(null)
+    const carousel = useRef(null)
 
     let direction = 1
-    
+
     const stepPrevious = () => {
         if (direction === 1) {
-            slider.appendChild(slider.firstElementChild)
-            // console.log("Previous", direction)
+            slider.current.appendChild(slider.current.firstElementChild)
         }
+        // console.log("Slider About me: ", slider.current)
+        // console.log("Carousel About me: ", carousel.current)
         direction = -1
-        console.log("Previous", direction)
-        carousel.style.justifyContent = 'flex-end'
-        slider.style.transform = 'translate(33%)'
+        carousel.current.style.justifyContent = 'flex-end'
+        slider.current.style.transform = 'translate(33%)'
     }
 
     const stepNext = () => {
         if (direction === -1) {
-            slider.prepend(slider.lastElementChild)
-            // console.log("Next", direction)
+            slider.current.prepend(slider.current.lastElementChild)
         }
+        // console.log("Slider About me: ", slider.current)
+        // console.log("Carousel About me: ", carousel.current)
         direction = 1
-        console.log("Next", direction)
-        carousel.style.justifyContent = 'flex-start'
-        slider.style.transform = 'translate(-33%)'
+        carousel.current.style.justifyContent = 'flex-start'
+        slider.current.style.transform = 'translate(-33%)'
     }
 
     const sliderAppend = () => {
-        if (direction === 1) { // next
-            slider.appendChild(slider.firstElementChild)
-        } else if (direction === -1) { // previous
-            slider.prepend(slider.lastElementChild)
+        if (direction === 1) { 
+            slider.current.appendChild(slider.current.firstElementChild)
+        } else if (direction === -1) { 
+            slider.current.prepend(slider.current.lastElementChild)
         }
-        slider.style.transition = 'none'
-        slider.style.transform = 'translate(0)'
-        setTimeout(() => {slider.style.transition = 'all 0.5s'})
+        slider.current.style.transition = 'none'
+        slider.current.style.transform = 'translate(0)'
+        setTimeout(() => {slider.current.style.transition = 'all 0.75s'})
     }
 
     return (
@@ -60,33 +58,34 @@ export const AboutMe = () => {
                     id='about-me-container'
                 >
                     <div className="controls">
-                        <span
+                        <div
                             className='arrow-span-about-me arrow-left-about-me'
                         >
                             <Button
-                                className='button-about-me arrow-about-me'
+                                className='button-about-me'
                                 variant='contained'
                                 onClick={stepPrevious}
                             >
-                                <ArrowBackIos 
+                                <ChevronLeft 
                                     className="arrow-back-about-me"
                                 />
                             </Button>
-                        </span>
 
-                        <span
+                        </div>
+
+                        <div
                             className='arrow-span-about-me arrow-right-about-me'
                         >
                             <Button
-                                className='button-about-me arrow-about-me'
+                                className='button-about-me'
                                 variant='contained'
                                 onClick={stepNext}
                             >
-                                <ArrowForwardIos 
+                                <ChevronRight 
                                     className="arrow-forward-about-me"
                                 />
                             </Button>
-                        </span>
+                        </div>
                     </div>
 
                 <div
@@ -94,14 +93,16 @@ export const AboutMe = () => {
                 >
                     <div
                         className='carousel-about-me'
+                        ref={carousel}
                     >
                         <div
                             className='slider-about-me'
                             onTransitionEnd={sliderAppend}
+                            ref={slider}
                         >
                             <section className='text-white'><Background /></section>
                             <section className='text-white'><Adventures /></section>
-                            <section className='text-white'>Background 3</section>
+                            <section className='text-white'><Hobbies /></section>
                         </div>
                         
                     </div>
