@@ -1,63 +1,63 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./Background.css"
 import { Fade,
     Grow,
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Carousel from 'react-material-ui-carousel'
+import Siema from 'siema'
+
 
 export const Background = () => {
-    const [index, setIndex] = useState()
+    const backgroundSlider = useRef(null)
+    const backgroundCarousel = useRef(null)
 
-    // const backgroundCarousel = useRef(null)
-    // const backgroundSlider = useRef(null)
+    let direction = 1
 
-    // let direction = 1
+    const backgroundPhotos = [
+        'bar-iberre.jpg',
+        'bar-iberre2.jpg',
+        'bilbao.jpg',
+        'gernika.jpg',
+        'cincy-bfy.jpg',
+        'bfy-hifi.jpg',
+        'Palladium copy.jpg', 
+    ]
 
-    // const photos = [
-    //     'bar-iberre.jpg',
-    //     'bar-iberre2.jpg',
-    //     'bilbao.jpg',
-    //     'cincy-bfy.jpg',
-    //     'gernika.jpg',
-    //     'Palladium copy.jpg'
-    // ]
+    const backgroundPrev = (e) => {
+        e.stopPropagation()
+        if (direction === 1) {
+            backgroundSlider.current.appendChild(backgroundSlider.current.firstElementChild)
+        }
+        console.log("Slider Background: ", backgroundSlider.current)
+        console.log("Carousel Background: ", backgroundCarousel.current)
+        direction = -1
+        backgroundCarousel.current.style.justifyContent = 'flex-end'
+        backgroundSlider.current.style.transform = 'translate(14.285714%)'
+    }
 
-    // const backgroundPrev = (e) => {
-    //     e.stopPropagation()
-    //     if (direction === 1) {
-    //         backgroundSlider.current.appendChild(backgroundSlider.current.firstElementChild)
-    //     }
-    //     console.log("Slider Background: ", backgroundSlider.current)
-    //     console.log("Carousel Background: ", backgroundCarousel.current)
-    //     direction = -1
-    //     backgroundCarousel.current.style.justifyContent = 'flex-end'
-    //     backgroundSlider.current.style.transform = 'translate(33%)'
-    // }
+    const backgroundNext = (e) => {
+        e.stopPropagation()
+        if (direction === -1) {
+            backgroundSlider.current.prepend(backgroundSlider.current.lastElementChild)
+        }
+        console.log("Slider Background: ", backgroundSlider.current)
+        console.log("Carousel Background: ", backgroundCarousel.current)
+        direction = 1
+        backgroundCarousel.current.style.justifyContent = 'flex-start'
+        backgroundSlider.current.style.transform = 'translate(-14.285714%)'
+    }
 
-    // const backgroundNext = (e) => {
-    //     e.stopPropagation()
-    //     if (direction === -1) {
-    //         backgroundSlider.current.prepend(backgroundSlider.current.lastElementChild)
-    //     }
-    //     console.log("Slider Background: ", backgroundSlider.current)
-    //     console.log("Carousel Background: ", backgroundCarousel.current)
-    //     direction = 1
-    //     backgroundCarousel.current.style.justifyContent = 'flex-start'
-    //     backgroundSlider.current.style.transform = 'translate(-33%)'
-    // }
-
-    // const backgroundAppend = () => {
-    //     if (direction === 1) { 
-    //         backgroundSlider.current.appendChild(backgroundSlider.current.firstElementChild)
-    //     } else if (direction === -1) { 
-    //         backgroundSlider.current.prepend(backgroundSlider.current.lastElementChild)
-    //     }
-    //     backgroundSlider.current.style.transition = 'none'
-    //     backgroundSlider.current.style.transform = 'translate(0)'
-    //     setTimeout(() => {backgroundSlider.current.style.transition = 'all 0.75s'})
-    // }
+    const backgroundAppend = () => {
+        if (direction === 1) { 
+            backgroundSlider.current.appendChild(backgroundSlider.current.firstElementChild)
+        } else if (direction === -1) { 
+            backgroundSlider.current.prepend(backgroundSlider.current.lastElementChild)
+        }
+        backgroundSlider.current.style.transition = 'none'
+        backgroundSlider.current.style.transform = 'translate(0)'
+        setTimeout(() => {backgroundSlider.current.style.transition = 'all 0.75s'})
+    }
 
     return (
         <>
@@ -69,22 +69,23 @@ export const Background = () => {
                     <div
                         id="background-card"
                     >
-                        <Typography
-                            variant='h4'
-                            className='text-white background-heading noto-sans-about-me'
-                        >
-                            Background
-                        </Typography>
 
                         <div
                             id='background-container'
                         >
                             <Typography
+                                variant='h4'
+                                className='text-white background-heading background-noto-sans'
+                            >
+                                Background
+                            </Typography>
+
+                            <Typography
                                 className='text-white nunito'
                                 id='background-text'
                             >
                                 <div
-                                    className='paragraph-about-me'
+                                    className='background-paragraph'
                                 >
                                 I chose what one might call a "non-traditional" route to my education.
                                 I've been playing music since Kindergarten, so I thought it'd be appropriate to pursue a life of music.
@@ -92,7 +93,7 @@ export const Background = () => {
                                 </div>
                                 
                                 <div
-                                    className='paragraph-about-me'
+                                    className='background-paragraph'
                                 >
                                 Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
                                 There I taught English to students of all ages, and occassionally play gigs in a duo. 
@@ -100,7 +101,7 @@ export const Background = () => {
                                 </div>
                                 
                                 <div
-                                    className='paragraph-about-me'
+                                    className='background-paragraph'
                                 >
                                 During my time at IUPUI I joined a local group (
                                     <a
@@ -115,14 +116,14 @@ export const Background = () => {
                                 </div>
                                 
                                 <div
-                                    className='paragraph-about-me'
+                                    className='background-paragraph'
                                 >
                                 After getting my degree I spent about a year as a live sound engineer, building a music venue system from the ground up.
                                 Soon after that, I took on a full-time gig at an A/V rental & staging company where I stumbled upon programming during their warehouse expansion project, and it quickly became an engaging passion.
                                 </div>
 
                                 <div
-                                    className='paragraph-about-me'
+                                    className='background-paragraph'
                                 >
                                 Once I was laid off due to COVID, I took the opportunity to take advantage of <a
                                     href="https://www.kenzie.academy/"
@@ -137,36 +138,103 @@ export const Background = () => {
                                 </div>
                             </Typography>
 
-                        <div
-                            id='background-carousel-container'
-                        >
-                            <Carousel
-                                autoPlay={false}
-                                id="background-carousel"
-                                animation={'slide'}
-                                timeout={1000}
-                                swipe={true}
-                                navButtonsAlwaysVisible={false}
-                                index={0}
-                                onChange={(index) => setIndex(index)}
+                            <div 
+                                id="background-carousel-container"
                             >
-                                <div>
-                                            1
+                                <div 
+                                    className="background-carousel"
+                                    ref={backgroundCarousel}
+                                >
+                                    <div 
+                                        className="background-slider"
+                                        onTransitionEnd={backgroundAppend}
+                                        ref={backgroundSlider}
+                                    >
+                                        <div>
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[0]}`} 
+                                                alt="Bar Iberre"
+                                                className='background-image'
+                                            />
                                         </div>
                                         <div>
-                                            2
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[1]}`} 
+                                                alt="Bar Iberre 2"
+                                                className='background-image'
+                                            />
                                         </div>
                                         <div>
-                                            3
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[2]}`} 
+                                                alt="Bilbao"
+                                                className='background-image'
+                                            />
                                         </div>
                                         <div>
-                                            4
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[3]}`} 
+                                                alt="Gernika"
+                                                className='background-image'
+                                                />
                                         </div>
                                         <div>
-                                            5
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[4]}`} 
+                                                alt="Bigfoot Yancey in Cincinatti"
+                                                className='background-image'
+                                            />
                                         </div>
-                            </Carousel>
-                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[5]}`} 
+                                                alt="Bigfoot Yancey at HIFI"
+                                                className='background-image'
+                                                />
+                                        </div><div>
+                                            <img 
+                                                src={`images/background/${backgroundPhotos[6]}`} 
+                                                alt="Me playing at The Palladium"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    id='background-controls'
+                                >
+                                    <div
+                                        className='background-arrow-div background-arrow-left'
+                                    >
+                                        <Button
+                                            className='about-me-button background-prev'
+                                            variant='contained'
+                                            onClick={(e) => backgroundPrev(e)}
+                                        >
+                                            <ChevronLeft 
+                                                className="arrows"
+                                            />
+                                        </Button>
+
+                                    </div>
+
+                                    <div
+                                        className='background-arrow-div background-arrow-right'
+                                    >
+                                        <Button
+                                            className='about-me-button background-next'
+                                            variant='contained'
+                                            onClick={(e) => backgroundNext(e)}
+                                        >
+                                            <ChevronRight 
+                                                className="arrows"
+                                            />
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                                 
                         </div>
 
                     </div>
@@ -181,66 +249,3 @@ export const Background = () => {
 
 
 
-{/* <div 
-                                id="background-carousel-container"
-                            >
-                                <div 
-                                    className="carousel-background"
-                                    ref={backgroundCarousel}
-                                >
-                                    <div 
-                                        className="slider-background"
-                                        onTransitionEnd={backgroundAppend}
-                                        ref={backgroundSlider}
-                                    >
-                                        <div>
-                                            1
-                                        </div>
-                                        <div>
-                                            2
-                                        </div>
-                                        <div>
-                                            3
-                                        </div>
-                                        <div>
-                                            4
-                                        </div>
-                                        <div>
-                                            5
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div
-                                    id='background-controls'
-                                >
-                                    <div
-                                        className='arrow-span-background arrow-left-background'
-                                    >
-                                        <Button
-                                            className='button-background'
-                                            variant='contained'
-                                            onClick={(event) => backgroundPrev(event)}
-                                        >
-                                            <ChevronLeft 
-                                                className="arrow-back-background"
-                                            />
-                                        </Button>
-
-                                    </div>
-
-                                    <div
-                                        className='arrow-span-background arrow-right-background'
-                                    >
-                                        <Button
-                                            className='button-background'
-                                            variant='contained'
-                                            onClick={(event) => backgroundNext(event)}
-                                        >
-                                            <ChevronRight 
-                                                className="arrow-forward-background"
-                                            />
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div> */}

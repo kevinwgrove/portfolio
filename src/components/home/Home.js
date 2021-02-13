@@ -133,17 +133,7 @@ export const Home = () => {
                         <div
                             id="phantom-buttons-container"
                         >
-                            <a
-                                style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                    width: "100%",
-                                    height: "auto",
-                                    display:"flex",
-                                    justifyContent: "center",
-                                    alignItems: "center"
-                                }}
-                            >
+
                                 <Button
                                     className="text-white phantom-button"
                                     variant="contained"
@@ -155,19 +145,7 @@ export const Home = () => {
                                         }}
                                     />
                                 </Button>
-                            </a>
 
-                            <a
-                                style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                    width: "100%",
-                                    height: "auto",
-                                    display:"flex",
-                                    justifyContent: "center",
-                                    alignItems: "center"
-                                }}
-                            >
                                 <Button
                                 className="text-white phantom-button"
                                 variant="contained"
@@ -179,19 +157,7 @@ export const Home = () => {
                                         }}
                                     />
                                 </Button>
-                            </a>
-
-                            <a
-                                style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                    width: "100%",
-                                    height: "auto",
-                                    display:"flex",
-                                    justifyContent: "center",
-                                    alignItems: "center"
-                                }}
-                            >
+                        
                                 <Button
                                 className="text-white phantom-button"
                                 variant="contained"
@@ -202,8 +168,7 @@ export const Home = () => {
                                             fontSize: "300%",
                                         }}
                                     />
-                                </Button>
-                            </a>    
+                                </Button>  
 
                         </div>
                             </Grow>

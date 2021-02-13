@@ -1,37 +1,20 @@
 #about-me-container {
+    position: position;
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 40px;
 }
 
-#about-me-carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-    width: 1100px;
-    height: auto;
-    margin: 20px auto;
+.card {
+    margin-bottom: 100px;
+    width: auto;
 }
 
-.carousel-about-me {
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    overflow: hidden;
-}
-
-.slider-about-me {
-    display: flex;
-    height: 100%;
-    width: 300%;
-    flex-shrink: 0;
-    transition: all 0.75s;
+.card:last-child {
+    margin-bottom: 40px;
 }
 
 .slider-about-me section {
@@ -77,3 +60,24 @@
     align-items: center;
     margin: 20px auto 10px auto;
 }
+
+.about-me-button {
+    margin: 0 40px !important;
+    background-color: rgb(233, 153, 67) !important;
+    border: solid rgb(221, 144, 29) 3px !important;
+    border-radius: 50% !important;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 30px !important;
+}
+
+.arrows {
+    font-size: 40px !important;
+}
+
+.about-me-button:hover {
+    background-color: rgb(163, 103, 220) !important;
+    border: solid rgb(197, 145, 245) 2px !important;
+}
+
+
