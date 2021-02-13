@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    margin: auto;
 }
 
 #text-container {
@@ -59,8 +60,10 @@
 }
 
 .info {
+    margin: auto;
     display: flex;
     align-items: flex-start;
+    overflow: hidden;
 }
 
 .button-home {
@@ -87,26 +90,27 @@
     width: auto;
     display: flex;
     align-items: center;
-    margin: 60px 0 20px 0;
+    margin: 60px auto 20px auto;
 }
 
 .phantom-button {
-    width: auto !important;
-    height: auto !important;
+    width: 190px !important;
+    height: 190px !important;
     background-color: rgb(119, 189, 189) !important;
-    margin: 20px!important;
+    margin: 50px!important;
     border: solid rgb(0, 255, 251) 5px !important;
-    font-size: 400% !important;
+    font-size: 300% !important;
     padding: 10% !important;
     border-radius: 50% !important;
 }
 
 #phantom-buttons-container {
-    width: 100% !important;
-    height: 33%;
+    /* width: 100% !important; */
+    height: 0;
     position: absolute !important;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
-    bottom: 33% !important;
+    top: 160px !important;
 }

@@ -1,66 +1,68 @@
-#background-card, #adventure-card, #hobbies-card {
+#background-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: solid rgb(189, 189, 189) 2px;
-    border-radius: 10px;
-    width: 1050px;
-    position: sticky;
+    width: auto;
+    padding: 10px;
 }
 
 #background-container {
+    border: solid rgb(189, 189, 189) 2px;
+    border-radius: 10px;
     display: flex;
+    padding: 10px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    width: auto;
 }
 
 #background-carousel-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
     height: 90%;
-    margin: 0 15px 30px 10px;
+    margin: 10px;
 }
 
 .text-white {
     color: white !important;
 }
 
-.about-me-heading {
-    margin: 40px 0 20px 0 !important;
-}
-
 .background-heading {
     width: 100%;
-    padding: 10px 0 10px 20px;  
+    margin: 0 0 20px 20px !important;
 }
 
 #background-text {
-    width: 60% !important;
+    width: auto !important;
     padding: 0 0 0 20px !important;
+    flex-basis: 55% !important;
+    justify-self: center !important;
+    align-self: center !important;
 }
 
-.noto-sans-about-me {
+.background-noto-sans {
     font-family: "Noto Sans KR", sans-serif !important;
     font-weight: 400 !important;
 }
 
-.paragraph-about-me {
-    margin: 5px 0;
-}
-
-.paragraph-about-me:last-child {
+.background-paragraph:last-child {
     margin-bottom: 20px !important;
 }
 
-.image-about-me {
-    width: 90%;
+.background-image {
+    width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 4px;
 }
 
-.carousel-background {
+.background-carousel {
     width: 100%;
     height: 100%;
     border-radius: 3px;
@@ -68,19 +70,18 @@
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
-    border: solid green 2px;
 }
 
-.slider-background {
+.background-slider {
     display: flex;
     height: 100%;
-    width: 500%;
+    width: 700%;
     flex-shrink: 0;
     transition: all 0.75s;
-    border: solid grey 1px;
+
 }
 
-.slider-background div {
+.background-slider div {
     flex-basis: 20%;
     width: 20%;
     flex-shrink: 0;
@@ -95,5 +96,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px purple;
+    margin: 10px;
+}
+
+.background-button {
+    margin: 0 40px !important;
 }

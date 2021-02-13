@@ -25,6 +25,7 @@
     "react-spinners": "^0.10.4",
     "react-tiny-link": "^3.6.0",
     "read-more-react": "^1.0.10",
+    "siema": "^1.5.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
