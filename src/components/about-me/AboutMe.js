@@ -1,10 +1,7 @@
-import React, {useRef} from "react";
+import React from "react";
 import "./AboutMe.css"
-import { Button, 
-    Fade,
-    Grow,
-    Typography } from '@material-ui/core'
-import { ArrowBackIos, ArrowForwardIos, ChevronLeft, ChevronRight } from "@material-ui/icons";
+import { Fade } from '@material-ui/core'
+// import { ArrowBackIos, ArrowForwardIos, ChevronLeft, ChevronRight } from "@material-ui/icons";
 import { Background, Adventures, Hobbies } from "./about-me-components/index";
 
 

@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Card, 
-    Fade, 
+import React, {  useState } from "react";
+import { 
     Button, 
     Typography,
-    Zoom, 
     Grow,
     IconButton
 } from "@material-ui/core";
 import { Close, Email, Call, Textsms } from "@material-ui/icons"
 import './Home.css';
-import { BounceLoader } from "react-spinners";
-import ReactReadMoreReadLess from "react-read-more-read-less";
-
 
 export const Home = () => {
     const [contact, setContact] = useState(false)

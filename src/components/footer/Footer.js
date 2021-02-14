@@ -1,6 +1,5 @@
 import React from "react";
 import { Grow, 
-    Button,
     Link } from "@material-ui/core";
 import { GitHub,
     LinkedIn,
@@ -29,6 +28,7 @@ export const Footer = () => {
                         size="large"
                         href="https://github.com/kevinwgrove"
                         target="_blank"
+                        rel='noreferrer noopener'
                         >
                             <GitHub
                             className="footer-button"
@@ -52,6 +52,7 @@ export const Footer = () => {
                         size="large"
                         href="https://www.linkedin.com/in/kevin-grove-249247139/"
                         target="_blank"
+                        rel='noreferrer noopener'
                         >
                             <LinkedIn
                             className="footer-button"
@@ -75,6 +76,7 @@ export const Footer = () => {
                         size="large"
                         href="https://gitlab.com/kevinwgrove"
                         target="_blank"
+                        rel='noreferrer noopener'
                         >
                             <img 
                                 src="images/Gitlab-Icon.png" 

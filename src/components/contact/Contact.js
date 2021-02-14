@@ -5,13 +5,11 @@ import { Fade,
     TextField, 
     Typography, 
     makeStyles, 
-    withStyles, 
     Button,
     Fab, 
     useScrollTrigger,
     Zoom } from "@material-ui/core";
 import { KeyboardArrowUp } from "@material-ui/icons"
-import PropTypes from "prop-types";
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from '../../keys/index'
 import './Contact.css'
 

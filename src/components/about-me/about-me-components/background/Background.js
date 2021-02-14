@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import "./Background.css"
-import { Fade,
-    Grow,
+import { 
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Siema from 'siema'
 
 
 export const Background = () => {
@@ -110,6 +108,7 @@ export const Background = () => {
                                             color: 'white'
                                         }}
                                         target='_blank'
+                                        rel='noreferrer noopener'
                                     >Bigfoot Yancey</a>
                                 ) that plays original tunes and the occassional John Prine or Trampled by Turtles cover.
                                 Due to COVID, we haven't been playing very often. 
@@ -131,6 +130,7 @@ export const Background = () => {
                                         color: 'white'
                                     }}
                                     target='_blank'
+                                    rel='noreferrer noopener'
                                 >
                                     Kenzie Academy's
                                 </a> 1 year Full-Stack Software Engineering program, and the rest was history.
