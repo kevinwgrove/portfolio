@@ -58,7 +58,7 @@ export const buildLeagueTable = (team) => {
 }
 
 export const buildTeamSchedule = (team, table) => {
-    console.log(team)
+
     return (
         <>
             <Paper
