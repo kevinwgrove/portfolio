@@ -123,8 +123,7 @@ export const Builds = () => {
                                 <Link
                                 to="/epltable"
                                 style={{
-                                    textDecoration: 'none',
-                                    color: 'black'
+                                    textDecoration: 'none'
                                 }}
                                 >
                                     <Button
