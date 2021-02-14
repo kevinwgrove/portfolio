@@ -15,12 +15,18 @@ export const Hobbies = () => {
     let direction = 1
 
     const hobbiesPhotos = [
-        'bar-iberre.jpg',
-        'bar-iberre2.jpg',
-        'bilbao.jpg',
-        'cincy-bfy.jpg',
-        'gernika.jpg',
-        'Palladium copy.jpg'
+        'red river gorge.jpg',
+        'me and buddy.jpg',
+        'stork.jpeg',
+        'kingfisher.jpeg',
+        'african hawk.jpeg',
+        'takeoff-burntside.jpg',
+        'bwca bass.jpeg',
+        'bwca shoreline.jpeg',
+        'bwca sunset.jpg',
+        'bwca first year.jpg',
+        'bwca bluff.jpeg',
+        'bwca stars.jpeg'
     ]
 
     const hobbiesPrev = (e) => {
@@ -32,7 +38,7 @@ export const Hobbies = () => {
         console.log("Carousel hobbies: ", hobbiesCarousel.current)
         direction = -1
         hobbiesCarousel.current.style.justifyContent = 'flex-end'
-        hobbiesSlider.current.style.transform = 'translate(20%)'
+        hobbiesSlider.current.style.transform = 'translate(8.33%)'
     }
 
     const hobbiesNext = (e) => {
@@ -44,7 +50,7 @@ export const Hobbies = () => {
         console.log("Carousel hobbies: ", hobbiesCarousel.current)
         direction = 1
         hobbiesCarousel.current.style.justifyContent = 'flex-start'
-        hobbiesSlider.current.style.transform = 'translate(-20%)'
+        hobbiesSlider.current.style.transform = 'translate(-8.33%)'
     }
 
     const hobbiesAppend = () => {
@@ -86,55 +92,41 @@ export const Hobbies = () => {
                                 <div
                                     className='hobbies-paragraph'
                                 >
-                                I chose what one might call a "non-traditional" route to my education.
-                                I've been playing music since Kindergarten, so I thought it'd be appropriate to pursue a life of music.
-                                I received my Bachelor's of Science in Music Technology at IUPUI in 2017.
+                                    One of my favorite things to do in life is to observe the natural world around me.
+                                    Whether that's escaping off into the wilderness or marveling over the magnificent creatures in their natural habitat.
+                                </div>
+                                {/* <Link
+                                to="/birdnerd"
+                                style={{
+                                    textDecoration: 'none'
+                                }}
+                                ></Link> */}
+                                <div
+                                    className='hobbies-paragraph'
+                                >
+                                    As much as I get made fun of for my love of birds, I do admire their ability to fly and more so the incredible songs they create (Note: not all birds have pleasant songs, i.e. Marabou Stork).
+                                    I wouldn't say I'm a huge birder, I don't drop everything to go see a rare bird that is thousands of miles away.
+                                    Though, I do enjoy spotting them and listening to their calls.
                                 </div>
                                 
                                 <div
                                     className='hobbies-paragraph'
                                 >
-                                Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
-                                There I taught English to students of all ages, and occassionally play gigs in a duo. 
-                                With the few phrases I knew before I moved, I can now say that I am fluent in Spanish.
-                                </div>
-                                
-                                <div
-                                    className='hobbies-paragraph'
-                                >
-                                During my time at IUPUI I joined a local group (
-                                    <a
-                                        href="https://open.spotify.com/artist/4bAHFi3RQGvf7sl9vh6WyK"
-                                        style={{
-                                            color: 'white'
-                                        }}
-                                        target='_blank'
-                                    >Bigfoot Yancey</a>
-                                ) that plays original tunes and the occassional John Prine or Trampled by Turtles cover.
-                                Due to COVID, we haven't been playing very often. 
-                                </div>
-                                
-                                <div
-                                    className='hobbies-paragraph'
-                                >
-                                After getting my degree I spent about a year as a live sound engineer, building a music venue system from the ground up.
-                                Soon after that, I took on a full-time gig at an A/V rental & staging company where I stumbled upon programming during their warehouse expansion project, and it quickly became an engaging passion.
+                                    From my childhood up to about my sophmore year in high school, my family would go up to a camp in Ely, MN, just on the border of the Boundary Waters Canoe Area (BWCA).
+                                    The BWCA is a 1,000,000+ acre wilderness area located in the Superior National Forest in northern Minnesota.
+                                    Ever since 2013, I have been planning an annual trip to the Boundary Waters with friends.
+                                    Granted there has been a couple of years we weren't able to go.
+                                    It's an amazing experience that I enjoy sharing with those who have a passion for camping and the outdoors.
                                 </div>
 
                                 <div
                                     className='hobbies-paragraph'
                                 >
-                                Once I was laid off due to COVID, I took the opportunity to take advantage of <a
-                                    href="https://www.kenzie.academy/"
-                                    style={{
-                                        color: 'white'
-                                    }}
-                                    target='_blank'
-                                >
-                                    Kenzie Academy's
-                                </a> 1 year Full-Stack Software Engineering program, and the rest was history.
-
+                                    In part, those trips up to the Boundary Waters have made me develop a love of fishing.
+                                    I wouldn't say I'm a huge fisherman either, but when you are relying on fish as your main source of nutrients out in the middle of nowhere, it definitely is exciting to know that you're going to eat well that night.
+                                    I also wouldn't pass up a chance to go fishing.
                                 </div>
+                                
                             </Typography>
 
                             <div 
@@ -180,6 +172,55 @@ export const Hobbies = () => {
                                         <div>
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[4]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[5]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[6]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[7]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[8]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[9]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[10]}`} 
+                                                alt="Bar Iberre"
+                                                className='hobbies-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/hobbies/${hobbiesPhotos[11]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />

@@ -15,12 +15,17 @@ export const Adventures = () => {
     let direction = 1
 
     const adventuresPhotos = [
-        'bar-iberre.jpg',
-        'bar-iberre2.jpg',
-        'bilbao.jpg',
-        'cincy-bfy.jpg',
-        'gernika.jpg',
-        'Palladium copy.jpg'
+        'mama-lioness.jpg',
+        'mama-and-cubs.jpg',
+        'Safari.png',
+        'northern-lights-iceland.jpg',
+        'honeymoon.jpg',
+        'great-wall.jpg',
+        'surfing-indo.jpg', 
+        'Indo.jpg',
+        'me-and-pops-Vail.jpg',
+        'vail.jpg',
+        'the kop anfield.jpg'
     ]
 
     const adventuresPrev = (e) => {
@@ -32,7 +37,7 @@ export const Adventures = () => {
         console.log("Carousel adventures: ", adventuresCarousel.current)
         direction = -1
         adventuresCarousel.current.style.justifyContent = 'flex-end'
-        adventuresSlider.current.style.transform = 'translate(20%)'
+        adventuresSlider.current.style.transform = 'translate(9.09%)'
     }
 
     const adventuresNext = (e) => {
@@ -44,7 +49,7 @@ export const Adventures = () => {
         console.log("Carousel adventures: ", adventuresCarousel.current)
         direction = 1
         adventuresCarousel.current.style.justifyContent = 'flex-start'
-        adventuresSlider.current.style.transform = 'translate(-20%)'
+        adventuresSlider.current.style.transform = 'translate(-9.09%)'
     }
 
     const adventuresAppend = () => {
@@ -94,36 +99,78 @@ export const Adventures = () => {
                                     >
                                         <div>
                                             <img 
-                                                src={`images/background/${adventuresPhotos[0]}`} 
-                                                alt="Bar Iberre"
+                                                src={`images/adventures/${adventuresPhotos[0]}`} 
+                                                alt="Lioness in Tsavo West"
                                                 className='background-image'
                                             />
                                         </div>
                                         <div>
                                             <img 
-                                                src={`images/background/${adventuresPhotos[1]}`} 
-                                                alt="Bar Iberre"
+                                                src={`images/adventures/${adventuresPhotos[1]}`} 
+                                                alt="Mama Lioness and Cubs"
                                                 className='background-image'
                                             />
                                         </div>
                                         <div>
                                             <img 
-                                                src={`images/background/${adventuresPhotos[2]}`} 
-                                                alt="Bar Iberre"
+                                                src={`images/adventures/${adventuresPhotos[2]}`} 
+                                                alt="Safari resort"
                                                 className='background-image'
                                             />
                                         </div>
                                         <div>
                                             <img 
-                                                src={`images/background/${adventuresPhotos[3]}`} 
-                                                alt="Bar Iberre"
+                                                src={`images/adventures/${adventuresPhotos[3]}`} 
+                                                alt="Northern Lights in Iceland"
                                                 className='background-image'
                                             />
                                         </div>
                                         <div>
                                             <img 
-                                                src={`images/background/${adventuresPhotos[4]}`} 
-                                                alt="Bar Iberre"
+                                                src={`images/adventures/${adventuresPhotos[4]}`} 
+                                                alt="Honeymoon Northern Lights"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/adventures/${adventuresPhotos[5]}`} 
+                                                alt="Great Wall with my brother"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/adventures/${adventuresPhotos[6]}`} 
+                                                alt="Surfing Indonesia"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/adventures/${adventuresPhotos[7]}`} 
+                                                alt="Indo waves"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/adventures/${adventuresPhotos[8]}`} 
+                                                alt="Pops & I in Vail"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/adventures/${adventuresPhotos[9]}`} 
+                                                alt="Lunch break on Vail"
+                                                className='background-image'
+                                            />
+                                        </div>
+                                        <div>
+                                            <img 
+                                                src={`images/adventures/${adventuresPhotos[10]}`} 
+                                                alt="The Kop at Anfield"
                                                 className='background-image'
                                             />
                                         </div>
@@ -171,55 +218,41 @@ export const Adventures = () => {
                                 <div
                                     className='adventures-paragraph'
                                 >
-                                I chose what one might call a "non-traditional" route to my education.
-                                I've been playing music since Kindergarten, so I thought it'd be appropriate to pursue a life of music.
-                                I received my Bachelor's of Science in Music Technology at IUPUI in 2017.
+                                    As a product of a retired commercial pilot and a flight attendant, I acquired an itch for travel.
+                                    However, there are only a few regrets in my life, one of them being that I didn't take advantage of the fact that I could've flown by myself to anywhere in United States.
+                                    I could've had so many adventures as a kid.
                                 </div>
-                                
+
                                 <div
                                     className='adventures-paragraph'
                                 >
-                                Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
-                                There I taught English to students of all ages, and occassionally play gigs in a duo. 
-                                With the few phrases I knew before I moved, I can now say that I am fluent in Spanish.
-                                </div>
-                                
-                                <div
-                                    className='adventures-paragraph'
-                                >
-                                During my time at IUPUI I joined a local group (
-                                    <a
-                                        href="https://open.spotify.com/artist/4bAHFi3RQGvf7sl9vh6WyK"
+                                    I have been able to visit 4 of the <a 
+                                        href="https://www.livescience.com/57927-new-zealand-part-of-eighth-continent.html"
                                         style={{
                                             color: 'white'
                                         }}
                                         target='_blank'
-                                    >Bigfoot Yancey</a>
-                                ) that plays original tunes and the occassional John Prine or Trampled by Turtles cover.
-                                Due to COVID, we haven't been playing very often. 
+                                    >
+                                        8 continents
+                                    </a>. 
+                                    I have helped a Maasai spot lions at night in Tsavo West National Park, seen the Northern Lights in Iceland, visited the Great Wall outside of Beijing, surfed waves in Indonesia, skied the Rockies, and visited 35 of 50 States.
+                                    I've even had the privilege of attending a Liverpool match at Anfield, even though they lost.
+                                    One of my dreams is to visit every continent before I kick the bucket.
+                                </div>
+
+                                <div
+                                    className='adventures-paragraph'
+                                >
+                                    
                                 </div>
                                 
                                 <div
                                     className='adventures-paragraph'
                                 >
-                                After getting my degree I spent about a year as a live sound engineer, building a music venue system from the ground up.
-                                Soon after that, I took on a full-time gig at an A/V rental & staging company where I stumbled upon programming during their warehouse expansion project, and it quickly became an engaging passion.
+                                    There is something special about traveling to a distant place with all new people and a totally different culture that teaches so many important aspects of life.
+                                    I'm truly fortunate and grateful for all the opportunites I've had to explore.
                                 </div>
-
-                                <div
-                                    className='adventures-paragraph'
-                                >
-                                Once I was laid off due to COVID, I took the opportunity to take advantage of <a
-                                    href="https://www.kenzie.academy/"
-                                    style={{
-                                        color: 'white'
-                                    }}
-                                    target='_blank'
-                                >
-                                    Kenzie Academy's
-                                </a> 1 year Full-Stack Software Engineering program, and the rest was history.
-
-                                </div>
+                                
                             </Typography>
                                  
                         </div>
