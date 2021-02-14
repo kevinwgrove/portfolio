@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import "./Adventures.css"
-import { Fade,
-    Grow,
+import { 
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Siema from 'siema'
+
 
 
 export const Adventures = () => {
@@ -232,6 +231,7 @@ export const Adventures = () => {
                                             color: 'white'
                                         }}
                                         target='_blank'
+                                        rel='noreferrer noopener'
                                     >
                                         8 continents
                                     </a>. 
