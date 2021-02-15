@@ -139,12 +139,12 @@ export const Builds = () => {
                     timeout={2000}
                     >
                     <div
-                        id="epl-card"
+                        id="ebird-card"
                         className='builds-card'
                     >
                         <Typography
                             className='text-white jura'
-                            id='epl-title'
+                            id='botd-title'
                         >
                             Bird Of The Day (a.k.a. "Bird Nerd")
                         </Typography>
@@ -155,7 +155,7 @@ export const Builds = () => {
                                 className='logos-container'
                             >
                                 <img 
-                                src="images/ebird.webp" 
+                                src="images/eBird.jpg" 
                                 alt="eBird Logo"
                                 id="ebird-logo"       
                                 />

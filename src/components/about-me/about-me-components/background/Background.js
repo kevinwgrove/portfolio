@@ -94,7 +94,7 @@ export const Background = () => {
                                     className='background-paragraph'
                                 >
                                 Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
-                                There I taught English to students of all ages, and occassionally play gigs in a duo. 
+                                There I taught English to students of all ages, and occasionally play gigs in a duo. 
                                 With the few phrases I knew before I moved, I can now say that I am fluent in Spanish.
                                 </div>
                                 
@@ -110,7 +110,7 @@ export const Background = () => {
                                         target='_blank'
                                         rel='noreferrer noopener'
                                     >Bigfoot Yancey</a>
-                                ) that plays original tunes and the occassional John Prine or Trampled by Turtles cover.
+                                ) that plays original tunes and the occasional John Prine or Trampled by Turtles cover.
                                 Due to COVID, we haven't been playing very often. 
                                 </div>
                                 

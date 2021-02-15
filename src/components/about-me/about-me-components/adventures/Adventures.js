@@ -250,7 +250,7 @@ export const Adventures = () => {
                                     className='adventures-paragraph'
                                 >
                                     There is something special about traveling to a distant place with all new people and a totally different culture that teaches so many important aspects of life.
-                                    I'm truly fortunate and grateful for all the opportunites I've had to explore.
+                                    I'm truly fortunate and grateful for all the opportunities I've had to explore.
                                 </div>
                                 
                             </Typography>
