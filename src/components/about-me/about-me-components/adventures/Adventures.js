@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import "./Adventures.css"
-import { Fade,
-    Grow,
+import { 
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Siema from 'siema'
+
 
 
 export const Adventures = () => {
@@ -232,6 +231,7 @@ export const Adventures = () => {
                                             color: 'white'
                                         }}
                                         target='_blank'
+                                        rel='noreferrer noopener'
                                     >
                                         8 continents
                                     </a>. 
@@ -250,7 +250,7 @@ export const Adventures = () => {
                                     className='adventures-paragraph'
                                 >
                                     There is something special about traveling to a distant place with all new people and a totally different culture that teaches so many important aspects of life.
-                                    I'm truly fortunate and grateful for all the opportunites I've had to explore.
+                                    I'm truly fortunate and grateful for all the opportunities I've had to explore.
                                 </div>
                                 
                             </Typography>

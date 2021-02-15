@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import "./Background.css"
-import { Fade,
-    Grow,
+import { 
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Siema from 'siema'
 
 
 export const Background = () => {
@@ -96,7 +94,7 @@ export const Background = () => {
                                     className='background-paragraph'
                                 >
                                 Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
-                                There I taught English to students of all ages, and occassionally play gigs in a duo. 
+                                There I taught English to students of all ages, and occasionally play gigs in a duo. 
                                 With the few phrases I knew before I moved, I can now say that I am fluent in Spanish.
                                 </div>
                                 
@@ -110,8 +108,9 @@ export const Background = () => {
                                             color: 'white'
                                         }}
                                         target='_blank'
+                                        rel='noreferrer noopener'
                                     >Bigfoot Yancey</a>
-                                ) that plays original tunes and the occassional John Prine or Trampled by Turtles cover.
+                                ) that plays original tunes and the occasional John Prine or Trampled by Turtles cover.
                                 Due to COVID, we haven't been playing very often. 
                                 </div>
                                 
@@ -131,6 +130,7 @@ export const Background = () => {
                                         color: 'white'
                                     }}
                                     target='_blank'
+                                    rel='noreferrer noopener'
                                 >
                                     Kenzie Academy's
                                 </a> 1 year Full-Stack Software Engineering program, and the rest was history.

@@ -12,12 +12,14 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000)
-  }, [])
+    portfolioStore.table = fetchLeagueTable()
+    portfolioStore.league = fetchLeague()
+  })
 
-  useEffect(async () => {
-    portfolioStore.table = await fetchLeagueTable()
-    portfolioStore.league = await fetchLeague()
-  }, [])
+  // useEffect(() => {
+  //   portfolioStore.table = async () => await fetchLeagueTable()
+  //   portfolioStore.league = async () => await fetchLeague()
+  // },[portfolioStore])
   
   return (
     <>{loading ? (

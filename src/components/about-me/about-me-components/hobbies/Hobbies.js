@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import "./Hobbies.css"
-import { Fade,
-    Grow,
+import { 
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Siema from 'siema'
+
 
 
 export const Hobbies = () => {
@@ -104,7 +103,7 @@ export const Hobbies = () => {
                                 <div
                                     className='hobbies-paragraph'
                                 >
-                                    As much as I get made fun of for my love of birds, I do admire their ability to fly and more so the incredible songs they create (Note: not all birds have pleasant songs, i.e. Marabou Stork).
+                                    As much as I get made fun of for my love of birds, I do admire their ability to fly and more so the incredible songs they create (Note: not all birds have pleasant songs, i.e. the Marabou Stork).
                                     I wouldn't say I'm a huge birder, I don't drop everything to go see a rare bird that is thousands of miles away.
                                     Though, I do enjoy spotting them and listening to their calls.
                                 </div>
@@ -112,7 +111,7 @@ export const Hobbies = () => {
                                 <div
                                     className='hobbies-paragraph'
                                 >
-                                    From my childhood up to about my sophmore year in high school, my family would go up to a camp in Ely, MN, just on the border of the Boundary Waters Canoe Area (BWCA).
+                                    From my childhood up to about my sophomore year in high school, my family would go up to a camp in Ely, MN, just on the border of the Boundary Waters Canoe Area (BWCA).
                                     The BWCA is a 1,000,000+ acre wilderness area located in the Superior National Forest in northern Minnesota.
                                     Ever since 2013, I have been planning an annual trip to the Boundary Waters with friends.
                                     Granted there has been a couple of years we weren't able to go.
