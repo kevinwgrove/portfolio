@@ -77,17 +77,17 @@ export const Hobbies = () => {
                         <div
                             id='hobbies-container'
                         >
-                            <Typography
-                                variant='h4'
-                                className='text-white hobbies-heading hobbies-noto-sans'
-                            >
-                                Hobbies
-                            </Typography>
 
                             <Typography
                                 className='text-white nunito'
                                 id='hobbies-text'
                             >
+                                <Typography
+                                variant='h4'
+                                className='text-white hobbies-heading hobbies-noto-sans'
+                                >
+                                    Hobbies
+                                </Typography>
                                 <div
                                     className='hobbies-paragraph'
                                 >
@@ -140,84 +140,108 @@ export const Hobbies = () => {
                                         onTransitionEnd={hobbiesAppend}
                                         ref={hobbiesSlider}
                                     >
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[0]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[1]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[2]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[3]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[4]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[5]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[6]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[7]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[8]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[9]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[10]}`} 
                                                 alt="Bar Iberre"
                                                 className='hobbies-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='hobbies-image-container'
+                                        >
                                             <img 
                                                 src={`images/hobbies/${hobbiesPhotos[11]}`} 
                                                 alt="Bar Iberre"
@@ -250,7 +274,7 @@ export const Hobbies = () => {
                                         className='hobbies-arrow-div hobbies-arrow-right'
                                     >
                                         <Button
-                                            className='about-me-button backgroung-next'
+                                            className='about-me-button hobbies-next'
                                             variant='contained'
                                             onClick={(e) => hobbiesNext(e)}
                                         >

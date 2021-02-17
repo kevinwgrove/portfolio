@@ -69,6 +69,6 @@ export const fetchLeague = async () => {
     }
   })
   const response = await result.json()
-  console.log(response.leagues)
+  // console.log(response.leagues)
   return Promise.all(response.leagues)
 }

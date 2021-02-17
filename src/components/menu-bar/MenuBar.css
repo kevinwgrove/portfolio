@@ -1,16 +1,18 @@
-/* #menu-bar {
+#menu-bar {
     display: flex;
+    justify-content: space-between !important;
     align-items: center;
-    justify-content: space-evenly;
     height: 80px;
-} */
+    width: 100%;
+    margin: auto;
+}
 
-#back-to-top-anchor {
+/* #back-to-top-anchor {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
-}
+} */
 
 .menu-button {
     height: 40px;

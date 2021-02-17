@@ -71,72 +71,73 @@ export const Background = () => {
                         <div
                             id='background-container'
                         >
-                            <Typography
-                                variant='h4'
-                                className='text-white background-heading background-noto-sans'
-                            >
-                                Background
-                            </Typography>
+                                                   
 
-                            <Typography
-                                className='text-white nunito'
-                                id='background-text'
-                            >
-                                <div
-                                    className='background-paragraph'
+                                <Typography
+                                    className='text-white nunito'
+                                    id='background-text'
                                 >
-                                I chose what one might call a "non-traditional" route to my education.
-                                I've been playing music since Kindergarten, so I thought it'd be appropriate to pursue a life of music.
-                                I received my Bachelor's of Science in Music Technology at IUPUI in 2017.
-                                </div>
-                                
-                                <div
-                                    className='background-paragraph'
+                                <Typography
+                                    variant='h4'
+                                    className='text-white background-heading background-noto-sans'
                                 >
-                                Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
-                                There I taught English to students of all ages, and occasionally play gigs in a duo. 
-                                With the few phrases I knew before I moved, I can now say that I am fluent in Spanish.
-                                </div>
-                                
-                                <div
-                                    className='background-paragraph'
-                                >
-                                During my time at IUPUI I joined a local group (
-                                    <a
-                                        href="https://open.spotify.com/artist/4bAHFi3RQGvf7sl9vh6WyK"
+                                    Background
+                                </Typography>
+                                    <div
+                                        className='background-paragraph'
+                                    >
+                                    I chose what one might call a non-traditional route to my education.
+                                    I've been playing music since Kindergarten, so I thought it'd be appropriate to pursue a life of music.
+                                    I received my Bachelor's of Science in Music Technology at IUPUI in 2017.
+                                    </div>
+                                    
+                                    <div
+                                        className='background-paragraph'
+                                    >
+                                    Before finally pursuing my degree I spent two years between 2010-2012 living in Bilbao, Spain. 
+                                    There I taught English to students of all ages, and occasionally play gigs in a duo. 
+                                    With the few phrases I knew before I moved, I can now say that I am fluent in Spanish.
+                                    </div>
+                                    
+                                    <div
+                                        className='background-paragraph'
+                                    >
+                                    During my time at IUPUI I joined a local group (
+                                        <a
+                                            href="https://open.spotify.com/artist/4bAHFi3RQGvf7sl9vh6WyK"
+                                            style={{
+                                                color: 'white'
+                                            }}
+                                            target='_blank'
+                                            rel='noreferrer noopener'
+                                        >Bigfoot Yancey</a>
+                                    ) that plays original tunes and the occasional John Prine or Trampled by Turtles cover.
+                                    Due to COVID, we haven't been playing very often. 
+                                    </div>
+                                    
+                                    <div
+                                        className='background-paragraph'
+                                    >
+                                    After getting my degree I spent about a year as a live sound engineer, building a music venue system from the ground up.
+                                    Soon after that, I took on a full-time gig at an A/V rental & staging company where I stumbled upon programming during their warehouse expansion project, and it quickly became an engaging passion.
+                                    </div>
+
+                                    <div
+                                        className='background-paragraph'
+                                    >
+                                    Once I was laid off due to COVID, I took the opportunity to take advantage of <a
+                                        href="https://www.kenzie.academy/"
                                         style={{
                                             color: 'white'
                                         }}
                                         target='_blank'
                                         rel='noreferrer noopener'
-                                    >Bigfoot Yancey</a>
-                                ) that plays original tunes and the occasional John Prine or Trampled by Turtles cover.
-                                Due to COVID, we haven't been playing very often. 
-                                </div>
-                                
-                                <div
-                                    className='background-paragraph'
-                                >
-                                After getting my degree I spent about a year as a live sound engineer, building a music venue system from the ground up.
-                                Soon after that, I took on a full-time gig at an A/V rental & staging company where I stumbled upon programming during their warehouse expansion project, and it quickly became an engaging passion.
-                                </div>
+                                    >
+                                        Kenzie Academy's
+                                    </a> 1 year Full-Stack Software Engineering program, and the rest was history.
 
-                                <div
-                                    className='background-paragraph'
-                                >
-                                Once I was laid off due to COVID, I took the opportunity to take advantage of <a
-                                    href="https://www.kenzie.academy/"
-                                    style={{
-                                        color: 'white'
-                                    }}
-                                    target='_blank'
-                                    rel='noreferrer noopener'
-                                >
-                                    Kenzie Academy's
-                                </a> 1 year Full-Stack Software Engineering program, and the rest was history.
-
-                                </div>
-                            </Typography>
+                                    </div>
+                                </Typography>
 
                             <div 
                                 id="background-carousel-container"
@@ -150,48 +151,63 @@ export const Background = () => {
                                         onTransitionEnd={backgroundAppend}
                                         ref={backgroundSlider}
                                     >
-                                        <div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[0]}`} 
                                                 alt="Bar Iberre"
                                                 className='background-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[1]}`} 
                                                 alt="Bar Iberre 2"
                                                 className='background-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[2]}`} 
                                                 alt="Bilbao"
                                                 className='background-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[3]}`} 
                                                 alt="Gernika"
                                                 className='background-image'
                                                 />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[4]}`} 
                                                 alt="Bigfoot Yancey in Cincinatti"
                                                 className='background-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[5]}`} 
                                                 alt="Bigfoot Yancey at HIFI"
                                                 className='background-image'
                                                 />
-                                        </div><div>
+                                        </div>
+                                        <div
+                                            className='background-image-container'
+                                        >
                                             <img 
                                                 src={`images/background/${backgroundPhotos[6]}`} 
                                                 alt="Me playing at The Palladium"
