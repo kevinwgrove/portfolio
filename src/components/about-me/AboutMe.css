@@ -11,6 +11,7 @@
 .card {
     margin-bottom: 100px;
     width: auto;
+    flex-grow: 1;
 }
 
 .card:last-child {
@@ -30,7 +31,7 @@
     color: white !important;
 }
 
-.button-about-me {
+/* .button-about-me {
     width: 70px !important;
     height: auto !important;
     background-color: rgb(107, 228, 228) !important;
@@ -39,7 +40,7 @@
     align-items: center !important;
     text-align: center !important;
     margin: 0 20px !important;
-}
+} */
 
 .button-about-me:hover {
     background-color: rgb(163, 103, 220) !important;
@@ -63,8 +64,8 @@
 
 .about-me-button {
     margin: 0 40px !important;
-    background-color: rgb(233, 153, 67) !important;
-    border: solid rgb(221, 144, 29) 3px !important;
+    background-color: rgb(107, 228, 228) !important;
+    border: solid rgb(107, 172, 172) 3px !important;
     border-radius: 50% !important;
     width: 30px !important;
     height: 30px !important;

@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import "./Adventures.css"
-import { Fade,
-    Grow,
+import { 
     Typography,
     Button } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
-import Siema from 'siema'
+
 
 
 export const Adventures = () => {
@@ -78,13 +77,6 @@ export const Adventures = () => {
                             id='adventures-container'
                         >
 
-                            <Typography
-                                variant='h4'
-                                className='text-white adventures-heading adventures-noto-sans'
-                            >
-                                Adventures
-                            </Typography>
-
                             <div 
                                 id="adventures-carousel-container"
                             >
@@ -97,81 +89,103 @@ export const Adventures = () => {
                                         onTransitionEnd={adventuresAppend}
                                         ref={adventuresSlider}
                                     >
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[0]}`} 
                                                 alt="Lioness in Tsavo West"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[1]}`} 
                                                 alt="Mama Lioness and Cubs"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[2]}`} 
                                                 alt="Safari resort"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[3]}`} 
                                                 alt="Northern Lights in Iceland"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[4]}`} 
                                                 alt="Honeymoon Northern Lights"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[5]}`} 
                                                 alt="Great Wall with my brother"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[6]}`} 
                                                 alt="Surfing Indonesia"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[7]}`} 
                                                 alt="Indo waves"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[8]}`} 
                                                 alt="Pops & I in Vail"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[9]}`} 
                                                 alt="Lunch break on Vail"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
-                                        <div>
+                                        <div
+                                            className='adventures-image-container'
+                                        >
                                             <img 
                                                 src={`images/adventures/${adventuresPhotos[10]}`} 
                                                 alt="The Kop at Anfield"
-                                                className='background-image'
+                                                className='adventures-image'
                                             />
                                         </div>
                                     </div>
@@ -199,7 +213,7 @@ export const Adventures = () => {
                                         className='adventures-arrow-div adventures-arrow-right'
                                     >
                                         <Button
-                                            className='about-me-button backgroung-next'
+                                            className='about-me-button adventures-next'
                                             variant='contained'
                                             onClick={(e) => adventuresNext(e)}
                                         >
@@ -215,6 +229,12 @@ export const Adventures = () => {
                                 className='text-white nunito'
                                 id='adventures-text'
                             >
+                                <Typography
+                                variant='h4'
+                                className='text-white adventures-heading adventures-noto-sans'
+                                >
+                                    Adventures
+                                </Typography>
                                 <div
                                     className='adventures-paragraph'
                                 >
@@ -232,6 +252,7 @@ export const Adventures = () => {
                                             color: 'white'
                                         }}
                                         target='_blank'
+                                        rel='noreferrer noopener'
                                     >
                                         8 continents
                                     </a>. 
@@ -250,7 +271,7 @@ export const Adventures = () => {
                                     className='adventures-paragraph'
                                 >
                                     There is something special about traveling to a distant place with all new people and a totally different culture that teaches so many important aspects of life.
-                                    I'm truly fortunate and grateful for all the opportunites I've had to explore.
+                                    I'm truly fortunate and grateful for all the opportunities I've had to explore.
                                 </div>
                                 
                             </Typography>

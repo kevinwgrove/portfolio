@@ -1,28 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Card, 
+import { 
     Fade, 
-    IconButton, 
-    Typography,
-    Popper,
-    Paper, 
+    Typography, 
     Button} from "@material-ui/core";
-import { ArrowForwardIos, ArrowForward, ChevronRight } from "@material-ui/icons"
-// import { EPL_DB_KEY } from "../../keys/index";
-import { BounceLoader } from "react-spinners";
-import ReactReadMoreReadLess from "react-read-more-read-less";
-import { fetchLeagueTable,
-    fetchLeague, 
-    buildLeagueTable,
-    buildTeamSchedule } from "../../helpers/index"
+import { ArrowForward, ChevronRight } from "@material-ui/icons"
+import { fetchLeague } from "../../helpers/index"
 import "./Builds.css";
 import { usePortfolioStore } from "../../PortfolioContext";
-import { EPLTable } from "./build-components/epl-table/index"
 import { Link } from "react-router-dom"
 
 
 export const Builds = () => {
-    const [build, setBuild] = useState(true)
-    const [epl, setEpl] = useState(false)
     const [league, setLeague] = useState({})
     
     const portfolioStore = usePortfolioStore()
@@ -30,17 +18,15 @@ export const Builds = () => {
 
     useEffect(() => {
         if(mobxLeague.length > 0) {
-            console.log(mobxLeague[0].strBadge)
             setLeague(mobxLeague[0])
         } else {
             helperFetchLeague()
         }
         buildBOTD()
-    }, [])
+    }, [mobxLeague])
 
     const helperFetchLeague = async () => {
         const result = await fetchLeague()
-        console.log(result[0])
         setLeague(result[0])
     }
 
@@ -52,8 +38,6 @@ export const Builds = () => {
              }
         }).then((res) => {
             return res.json()
-        }).then((result) => {
-            console.log(result)
         })
     }
 
@@ -148,12 +132,12 @@ export const Builds = () => {
                     timeout={2000}
                     >
                     <div
-                        id="epl-card"
+                        id="ebird-card"
                         className='builds-card'
                     >
                         <Typography
                             className='text-white jura'
-                            id='epl-title'
+                            id='botd-title'
                         >
                             Bird Of The Day (a.k.a. "Bird Nerd")
                         </Typography>
@@ -164,7 +148,7 @@ export const Builds = () => {
                                 className='logos-container'
                             >
                                 <img 
-                                src="images/ebird.webp" 
+                                src="images/eBird.jpg" 
                                 alt="eBird Logo"
                                 id="ebird-logo"       
                                 />
@@ -197,14 +181,14 @@ export const Builds = () => {
                                     color: 'black'
                                 }}
                                 > */}
-                                    <Button
+                                    {/* <Button
                                         className='button-builds'
                                         variant='contained'
                                     >
                                         <ChevronRight 
                                             className="arrow-forward-ios-builds"
                                         />
-                                    </Button>
+                                    </Button> */}
                                 {/* </Link> */}
                             </div>
 

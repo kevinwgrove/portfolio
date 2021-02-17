@@ -4,7 +4,7 @@
             "name":"Knowmad",
             "address":"https://www.knowmadapp.com/",
             "sourcecode": "https://gitlab.com/kevinwgrove/nomad",
-            "description":"Knowmad was a capstone project during my time at Kenzie Academy. We were tasked with developing an MVP of an application that students pitched to be developed. Mine turned into Knowmad.  Knowmad was developed as a platform for users to find instructors in their area. Instructors were to create a profile with their background, subjects and rates.  This is an ongoing project, so expect changes over time.",
+            "description":"Knowmad is an ongoing project I developed for users to find instructors in their area.  Instructors are able to create a profile with their background, subjects and rates. I like think of it as an Uber for private lessons.",
             "stack": ["ReactJS", "Google Maps API", "Google Firebase", "Material UI"],
             "photo": "images/Knowmad.png"
         },

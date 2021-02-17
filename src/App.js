@@ -5,19 +5,22 @@ import { Fade } from "@material-ui/core"
 import { fetchLeague, fetchLeagueTable } from "./helpers/index"
 import './App.css';
 import { usePortfolioStore } from './PortfolioContext'
+import { MEASUREMENT_ID } from './keys/index'
+import ReactGA from 'react-ga'
+
+ReactGA.initialize(MEASUREMENT_ID)
 
 function App() {
   const portfolioStore = usePortfolioStore()
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
-  }, [])
+  ReactGA.pageview(window.location.pathname + window.location.search)
 
-  useEffect(async () => {
-    portfolioStore.table = await fetchLeagueTable()
-    portfolioStore.league = await fetchLeague()
-  }, [])
+  useEffect(() => {
+    fetchLeagueTable().then((result) => portfolioStore.table = result)
+    fetchLeague().then((result) => portfolioStore.league = result)
+    setTimeout(() => setLoading(false), 2000)
+  })
   
   return (
     <>{loading ? (

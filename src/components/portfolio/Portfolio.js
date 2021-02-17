@@ -1,20 +1,14 @@
 import { Button, 
-    Card, 
-    Grow, 
+    Card,  
     Typography, 
     Fab, 
     useScrollTrigger,
     Zoom,
     makeStyles,
-    Toolbar, 
-    Slide,
     Fade} from "@material-ui/core";
 import { Code, OpenInNew, KeyboardArrowUp } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import "./Portfolio.css"
-import { Link } from "react-router-dom";
-import { ReactTinyLink } from 'react-tiny-link'
-import PropTypes from "prop-types";
 import Carousel from 'react-material-ui-carousel'
 // import { Carousel } from "@brainhubeu/react-carousel";
 
@@ -58,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
 export const Portfolio = (props) => {
     const [projects, setProjects] = useState()
     const [index, setIndex] = useState()
-    const [animation, setAnimation] = useState(true)
 
     useEffect(() => {
         buildPortfolio()
@@ -73,65 +66,64 @@ export const Portfolio = (props) => {
              }
         }
         ).then(function(res) {
-            console.log(res)
+            // console.log(res)
             return res.json()
         }).then(function(myJson) {
-            for (const [key, value] of Object.entries(myJson)) {
-                setProjects(value)
-            }
+            setProjects(myJson.project)
+            
         })
 
         
     }
     
-    const triggerChange = (index) => {
-        setAnimation(false)
-        setTimeout(() => setAnimation(true), 5) 
-        setIndex(index)
-    }
+    // const triggerChange = (index) => {
+    //     setAnimation(false)
+    //     setTimeout(() => setAnimation(true), 5) 
+    //     setIndex(index)
+    // }
 
-    const buildInfo = () => {
-        setAnimation(true)
+    // const buildInfo = () => {
+    //     setAnimation(true)
 
-        setTimeout(() => (
-        <>
-            <Fade
-                in={animation}
-                timeout={{
-                    appear: 500,
-                    exit: 250,
-                    enter: 250
-                }}
-            >
-                <div
-                    className="info-container"
-                >
-                    <Typography
-                        variant="h4"
-                        className="card-title text-white"
-                    >
-                        {projects[index].name}
-                    </Typography>
-                    <div
-                        className="paragraph-container"
-                    >
-                        {projects[index].description.split("  ").map((paragraph)=>{
-                                return(
-                                    <Typography
-                                        className="paragraph text-white"
-                                    >
-                                        {paragraph}
-                                    </Typography>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-            </Fade>
-        </>
-        ), 500)
-        console.log(animation)
-    }
+    //     setTimeout(() => (
+    //     <>
+    //         <Fade
+    //             in={animation}
+    //             timeout={{
+    //                 appear: 500,
+    //                 exit: 250,
+    //                 enter: 250
+    //             }}
+    //         >
+    //             <div
+    //                 className="info-container"
+    //             >
+    //                 <Typography
+    //                     variant="h4"
+    //                     className="card-title text-white"
+    //                 >
+    //                     {projects[index].name}
+    //                 </Typography>
+    //                 <div
+    //                     className="paragraph-container"
+    //                 >
+    //                     {projects[index].description.split("  ").map((paragraph)=>{
+    //                             return(
+    //                                 <Typography
+    //                                     className="paragraph text-white"
+    //                                 >
+    //                                     {paragraph}
+    //                                 </Typography>
+    //                             )
+    //                         })
+    //                     }
+    //                 </div>
+    //             </div>
+    //         </Fade>
+    //     </>
+    //     ), 500)
+    //     console.log(animation)
+    // }
 
     return(
         <>
@@ -162,7 +154,6 @@ export const Portfolio = (props) => {
             {
                 projects ?
                 projects.map((item)=>{
-                    console.log(item.photo)
                 return(
                     <>
                         <div
@@ -172,6 +163,7 @@ export const Portfolio = (props) => {
                                 <img 
                                     src={item.photo}
                                     className="project-photo"
+                                    alt={item.name}
                                 />
                             </Card>
                         </div>
@@ -184,7 +176,7 @@ export const Portfolio = (props) => {
                 index>=0 ?
                     <>
                         <Fade
-                            in={animation}
+                            in={true}
                             timeout={{
                                 appear: 500,
                                 exit: 250,
@@ -238,7 +230,7 @@ export const Portfolio = (props) => {
                                     className="button-container"
                                 >
                                     {
-                                        projects[index].sourcecode != "" ?
+                                        projects[index].sourcecode !== "" ?
                                         (
                                             <a
                                                 href={projects[index].sourcecode}
@@ -247,6 +239,7 @@ export const Portfolio = (props) => {
                                                     textDecoration: 'none',
                                                     color: 'black'
                                                 }}
+                                                rel='noreferrer noopener'
                                             >
                                                 <Button
                                                     variant="contained"
@@ -266,7 +259,7 @@ export const Portfolio = (props) => {
                                     }
 
                                     {
-                                        projects[index].address != "" ?
+                                        projects[index].address !== "" ?
                                         (
                                             <a
                                                 href={projects[index].address}
@@ -275,6 +268,7 @@ export const Portfolio = (props) => {
                                                     textDecoration: 'none',
                                                     color: 'black'
                                                 }}
+                                                rel='noreferrer noopener'
                                             >
                                                 <Button
                                                     variant="contained"

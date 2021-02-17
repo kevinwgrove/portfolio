@@ -12,7 +12,7 @@ import { Fade,
     Paper, 
     Grow,
     Button} from "@material-ui/core";
-import { Close, KeyboardArrowDown, ArrowBackIos, ChevronLeft } from "@material-ui/icons"
+import { Close, KeyboardArrowDown, ChevronLeft } from "@material-ui/icons"
 // import ReactReadMoreReadLess from "react-read-more-read-less";
 import { Link } from "react-router-dom"
 
@@ -36,7 +36,7 @@ export const EPLTable = () => {
         } else {
             helperFetchTable()
         }
-    }, [])
+    }, [mobxTable])
 
     const buildTable = () => {
         let miliseconds = 0
@@ -152,7 +152,7 @@ export const EPLTable = () => {
                     id="epl-table"
                 >
                 {
-                    table.length == 20 ?
+                    table.length === 20 ?
                     <>
                     <div
                         className="info-header text-white"

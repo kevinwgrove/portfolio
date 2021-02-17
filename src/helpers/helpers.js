@@ -1,7 +1,5 @@
 import { Typography,
-    Paper,
-    Fade,
-    Grow } from "@material-ui/core"
+    Paper } from "@material-ui/core"
 
 export const buildLeagueTable = (team) => {
     return (
@@ -107,7 +105,7 @@ export const buildTeamSchedule = (team, table) => {
 
 
                                 {
-                                    match.strHomeTeam == team.name ?
+                                    match.strHomeTeam === team.name ?
                                     <Typography
                                         className="home-away"
                                     >
