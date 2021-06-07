@@ -75,55 +75,6 @@ export const Portfolio = (props) => {
 
         
     }
-    
-    // const triggerChange = (index) => {
-    //     setAnimation(false)
-    //     setTimeout(() => setAnimation(true), 5) 
-    //     setIndex(index)
-    // }
-
-    // const buildInfo = () => {
-    //     setAnimation(true)
-
-    //     setTimeout(() => (
-    //     <>
-    //         <Fade
-    //             in={animation}
-    //             timeout={{
-    //                 appear: 500,
-    //                 exit: 250,
-    //                 enter: 250
-    //             }}
-    //         >
-    //             <div
-    //                 className="info-container"
-    //             >
-    //                 <Typography
-    //                     variant="h4"
-    //                     className="card-title text-white"
-    //                 >
-    //                     {projects[index].name}
-    //                 </Typography>
-    //                 <div
-    //                     className="paragraph-container"
-    //                 >
-    //                     {projects[index].description.split("  ").map((paragraph)=>{
-    //                             return(
-    //                                 <Typography
-    //                                     className="paragraph text-white"
-    //                                 >
-    //                                     {paragraph}
-    //                                 </Typography>
-    //                             )
-    //                         })
-    //                     }
-    //                 </div>
-    //             </div>
-    //         </Fade>
-    //     </>
-    //     ), 500)
-    //     console.log(animation)
-    // }
 
     return(
         <>
