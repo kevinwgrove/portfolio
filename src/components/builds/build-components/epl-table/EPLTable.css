@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
 }
-
 #epl-table {
     display: flex;
     flex-direction: column;
@@ -10,141 +9,114 @@
     width: auto;
     margin-bottom: 40px;
 }
-
 #loader {
     display: flex;
     flex-direction: column;
 }
-
 #back-icon-epl {
     position: sticky !important;
     top: 40px !important;
 }
-
 #left-container-epl {
     width: 100px;
 }
-
 #right-container-epl {
     width: 100px;
 }
-
 .team-info:nth-child(even) {
     background-color: rgb(86, 87, 91) !important;
 }
-
 .team-info:nth-child(odd) {
     background-color:  rgb(64, 67, 75);
 }
-
 .team-match {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
-
 .team-match:nth-child(odd) {
     background-color: #5a5f69 !important;
 }
-
 .team-match:nth-child(7) {
     border-bottom-right-radius: 5px !important;
     border-bottom-left-radius: 5px !important;
 }
-
 .match-date {
     width: 50px;
 }
-
 .match-time {
     width: 100px;
 }
-
 .match-league {
     width: 100px;
     display: flex;
     justify-content: center;
 }
-
 .home-away {
     width: 20px;
 }
-
 .match-details {
     width: 300px;
     display: flex;
     justify-content: center !important;
     align-items: center;
 }
-
 .text-white {
     color: white !important;
 }
-
 .info-header {
     display: flex;
     background-color: #282c34;
     position: sticky;
     top: 0;
 }
-
 .team-info {
     display: flex;
     align-items: center;
 }
-
 .team-position {
     width: 40px;
     margin: 5px 10px !important;
     text-align: center !important;
 }
-
 .team-position-header {
     width: 95px;
     margin: 5px 10px !important;
     text-align: left;
 }
-
 .team-badge {
     height: 35px;
     width: 35px;
     margin: 5px 20px 5px 0;
 }
-
 .badge-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .team-name {
     margin: 5px 10px !important;
     width: 150px;
 }
-
 .team-wins, .team-draws, .team-losses {
     margin: 5px 0 !important;
     width: 40px !important;
     text-align: center !important;
 }
-
 .team-points {
     margin: 5px 5px 5px 40px !important;
     text-align: center !important;
     width: 40px !important;
 }
-
 .team-button {
     margin: 5px 10px 5px 15px !important;
     background-color: #a3a5aa !important;
     width: 30px !important;
     height: 30px !important;
 }
-
 .team-button:hover {
     background-color: rgb(59, 114, 254) !important;
 }
-
 .popper-window {
     position: absolute !important;
     margin-left: -350px !important;
@@ -156,28 +128,23 @@
     align-items: center;
     border-radius: 5px !important;
 }
-
 .popper-team-stadium {
     height: auto;
     width: 500px;
     margin: 10px;
 }
-
 .popper-team-banner {
     width: 100% !important;
     border-top-left-radius: 5px !important;
     border-top-right-radius: 5px !important;
 }
-
 .stadium-info {
     margin-bottom: 5px !important;
     font-weight: bold !important;
 }
-
 .read-more-less--more, .read-more-less--less {
   color: rgb(50, 87, 235);
 }
-
 .button-epl {
     margin: 40px 0!important;
     background-color: rgb(107, 228, 228) !important;
@@ -187,7 +154,6 @@
     height: 30px !important;
     padding: 30px !important;
 }
-
 .back-icon {
     font-size: 60px !important;
     color: rgb(67, 36, 118) !important;

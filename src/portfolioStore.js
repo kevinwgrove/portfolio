@@ -1,6 +1,6 @@
 export const createPortfolioStore = () => {
-    return {
-        table: [],
-        league: [],
-    }
-}
+  return {
+    table: [],
+    league: [],
+  };
+};

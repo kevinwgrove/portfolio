@@ -1,187 +1,119 @@
 import React, { useEffect, useState } from "react";
-import { 
-    Fade, 
-    Typography, 
-    Button} from "@material-ui/core";
-import { ArrowForward, ChevronRight } from "@material-ui/icons"
-import { fetchLeague } from "../../helpers/index"
+import { Fade, Typography, Button } from "@material-ui/core";
+import { ArrowForward, ChevronRight } from "@material-ui/icons";
+import { fetchLeague } from "../../helpers/index";
 import "./Builds.css";
 import { usePortfolioStore } from "../../PortfolioContext";
-import { Link } from "react-router-dom"
-
-
+import { Link } from "react-router-dom";
 export const Builds = () => {
-    const [league, setLeague] = useState({})
-    
-    const portfolioStore = usePortfolioStore()
-    const mobxLeague = portfolioStore.league
+  const [league, setLeague] = useState({});
 
-    useEffect(() => {
-        if(mobxLeague.length > 0) {
-            setLeague(mobxLeague[0])
-        } else {
-            helperFetchLeague()
-        }
-        buildBOTD()
-    }, [mobxLeague])
-
-    const helperFetchLeague = async () => {
-        const result = await fetchLeague()
-        setLeague(result[0])
+  const portfolioStore = usePortfolioStore();
+  const mobxLeague = portfolioStore.league;
+  useEffect(() => {
+    if (mobxLeague.length > 0) {
+      setLeague(mobxLeague[0]);
+    } else {
+      helperFetchLeague();
     }
-
-    const buildBOTD = () => {
-        fetch('bird-info.json', {
-            headers : { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             }
-        }).then((res) => {
-            return res.json()
-        })
-    }
-
-    return (
-        <>
-            <Fade 
-            in={true}
-            timeout={1000}
-            >
-
-                <div id="builds-container">
-
-                    <Typography
-                        id='builds-p'
-                        className='text-white noto-sans'
-                    >
-                        This page is dedicated to demonstrate my knowledge on building complex, component based applications using different API calls. You also get to see some of the hobbies I enjoy in my free time. Enjoy!!!
-                    </Typography>
-
-                    <Fade
-                    in={true}
-                    timeout={2000}
-                    >
-                    <div
-                        id="epl-card"
-                        className='builds-card'
-                    >
-                        <Typography
-                            className='text-white jura'
-                            id='epl-title'
-                        >
-                            English Premier League Table
-                        </Typography>
-                        <div
-                            className="api-container"
-                        >
-                            <div
-                                className='logos-container'
-                            >
-                                <img 
-                                src="images/the_sports_db.png" 
-                                alt="The Sports DB Logo"
-                                id="sports-db"       
-                                />
-
-                                <ArrowForward 
-                                    className='arrow-forward-builds'
-                                />
-
-                                <img 
-                                src={league.strBadge} 
-                                alt="EPL Badge"
-                                id="league-badge"
-                                />
-                            </div>
-
-                            <div
-                                className='info-container-builds'
-                            >
-                                <Typography
-                                    className="text-white roboto roboto-text-builds"
-                                >
-                                    TheSportsDB is a community database of sports artwork and data that I used to build a league table. It's not the most accurate, but it's affordable and it does the job, so I can't complain. 
-                                </Typography>
-
-
-                                <Link
-                                to="/epltable"
-                                style={{
-                                    textDecoration: 'none'
-                                }}
-                                >
-                                    <Button
-                                        className='button-builds'
-                                        variant='contained'
-                                    >
-                                        <ChevronRight 
-                                            className="arrow-forward-ios-builds"
-                                        />
-                                    </Button>
-                                </Link>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    
-                    </Fade>
-
-                    <Fade
-                    in={true}
-                    timeout={2000}
-                    >
-                    <div
-                        id="ebird-card"
-                        className='builds-card'
-                    >
-                        <Typography
-                            className='text-white jura'
-                            id='botd-title'
-                        >
-                            Bird Of The Day (a.k.a. "Bird Nerd")
-                        </Typography>
-                        <div
-                            className="api-container"
-                        >
-                            <div
-                                className='logos-container'
-                            >
-                                <img 
-                                src="images/eBird.jpg" 
-                                alt="eBird Logo"
-                                id="ebird-logo"       
-                                />
-
-                                <ArrowForward 
-                                    className='arrow-forward-builds'
-                                />
-
-                                <img 
-                                src='images/cornell-lab.jpg' 
-                                alt="Cornell Lab of Ornithology logo"
-                                id="cornell-lab-logo"
-                                />
-                            </div>
-
-                            <div
-                                className='info-container-builds'
-                            >
-                                <Typography
-                                    className="text-white roboto roboto-text-builds"
-                                >
-                                    This build is under construction. Please be patient, awesomeness is soon to come. 
-                                </Typography>
-
-
-                                {/* <Link
+    buildBOTD();
+  }, [mobxLeague]);
+  const helperFetchLeague = async () => {
+    const result = await fetchLeague();
+    setLeague(result[0]);
+  };
+  const buildBOTD = () => {
+    fetch("bird-info.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }).then((res) => {
+      return res.json();
+    });
+  };
+  return (
+    <>
+      <Fade in={true} timeout={1000}>
+        <div id="builds-container">
+          <Typography id="builds-p" className="text-white noto-sans">
+            This page is dedicated to demonstrate my knowledge on building
+            complex, component based applications using different API calls. You
+            also get to see some of the hobbies I enjoy in my free time.
+            Enjoy!!!
+          </Typography>
+          <Fade in={true} timeout={2000}>
+            <div id="epl-card" className="builds-card">
+              <Typography className="text-white jura" id="epl-title">
+                English Premier League Table
+              </Typography>
+              <div className="api-container">
+                <div className="logos-container">
+                  <img
+                    src="images/the_sports_db.png"
+                    alt="The Sports DB Logo"
+                    id="sports-db"
+                  />
+                  <ArrowForward className="arrow-forward-builds" />
+                  <img
+                    src={league.strBadge}
+                    alt="EPL Badge"
+                    id="league-badge"
+                  />
+                </div>
+                <div className="info-container-builds">
+                  <Typography className="text-white roboto roboto-text-builds">
+                    TheSportsDB is a community database of sports artwork and
+                    data that I used to build a league table. It's not the most
+                    accurate, but it's affordable and it does the job, so I
+                    can't complain.
+                  </Typography>
+                  <Link
+                    to="/epltable"
+                    style={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    <Button className="button-builds" variant="contained">
+                      <ChevronRight className="arrow-forward-ios-builds" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Fade>
+          <Fade in={true} timeout={2000}>
+            <div id="ebird-card" className="builds-card">
+              <Typography className="text-white jura" id="botd-title">
+                Bird Of The Day (a.k.a. "Bird Nerd")
+              </Typography>
+              <div className="api-container">
+                <div className="logos-container">
+                  <img
+                    src="images/eBird.jpg"
+                    alt="eBird Logo"
+                    id="ebird-logo"
+                  />
+                  <ArrowForward className="arrow-forward-builds" />
+                  <img
+                    src="images/cornell-lab.jpg"
+                    alt="Cornell Lab of Ornithology logo"
+                    id="cornell-lab-logo"
+                  />
+                </div>
+                <div className="info-container-builds">
+                  <Typography className="text-white roboto roboto-text-builds">
+                    This build is under construction. Please be patient,
+                    awesomeness is soon to come.
+                  </Typography>
+                  {/* <Link
                                 to="/epltable"
                                 style={{
                                     textDecoration: 'none',
                                     color: 'black'
                                 }}
                                 > */}
-                                    {/* <Button
+                  {/* <Button
                                         className='button-builds'
                                         variant='contained'
                                     >
@@ -189,17 +121,13 @@ export const Builds = () => {
                                             className="arrow-forward-ios-builds"
                                         />
                                     </Button> */}
-                                {/* </Link> */}
-                            </div>
-
-                        </div>
-
-                    </div>
-                    </Fade>
+                  {/* </Link> */}
                 </div>
-
-            </Fade>
-            
-        </>
-    )
-}
+              </div>
+            </div>
+          </Fade>
+        </div>
+      </Fade>
+    </>
+  );
+};

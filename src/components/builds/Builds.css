@@ -5,19 +5,17 @@
     flex-direction: column;
     align-items: center;
     margin: 40px 0;
+    margin-top: 100px;
 }
-
 .text-white {
     color: white !important;
 }
-
 #builds-p {
     width: 40% !important;
     margin: 20px 0 40px 0;
     font-weight: 300 !important;
     font-size: 20px;
 }
-
 .builds-card {
     width: 1200px;
     height: 220px;
@@ -30,44 +28,37 @@
     align-items: center;
     flex-direction: column;
 }
-
 .api-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-
 #league-badge, #cornell-lab-logo, #ebird-logo {
     height: 150px;
     border: solid rgb(143, 228, 228) 3px;
     border-radius: 50%;
     /* margin: 0 0 0 30px; */
 }
-
 #sports-db {
     height: 150px;
     /* margin: 0 30px 0 0; */
 }
-
 #epl-title, #botd-title {
     font-weight: 700;
     font-size: 18px;
 }
-
 .arrow-forward-builds {
     color: rgb(67, 36, 118);
     font-size: 50px !important;
     width: 100px;
 }
-
 .logos-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50%;
 }
-
 .info-container-builds {
     width: 50%;
     margin: 5px 10px;
@@ -75,13 +66,11 @@
     justify-content: space-around;
     align-items: center;
 }
-
 .roboto-text-builds {
     font-weight: 400 !important;
     font-size: 15px !important;
     padding: 10px;
 }
-
 .button-builds {
     margin: 20px !important;
     background-color: rgb(107, 228, 228) !important;
@@ -91,13 +80,9 @@
     height: 30px !important;
     padding: 40px !important;
 }
-
 .arrow-forward-ios-builds {
     font-size: 80px !important;
     color: rgb(67, 36, 118) !important;
 }
-
-
 /* #epl-card {
-
 } */

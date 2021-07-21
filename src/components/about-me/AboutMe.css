@@ -1,36 +1,32 @@
 #about-me-container {
-    position: position;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
+  position: position;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  margin-top: 100px;
 }
-
 .card {
-    margin-bottom: 100px;
-    width: auto;
-    flex-grow: 1;
+  margin-bottom: 100px;
+  width: auto;
+  flex-grow: 1;
 }
-
 .card:last-child {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
-
 .slider-about-me section {
-    flex-basis: 33%;
-    width: 33%;
-    flex-shrink: 0;
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex-basis: 33%;
+  width: 33%;
+  flex-shrink: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
-
 .text-white {
-    color: white !important;
+  color: white !important;
 }
-
 /* .button-about-me {
     width: 70px !important;
     height: auto !important;
@@ -41,44 +37,37 @@
     text-align: center !important;
     margin: 0 20px !important;
 } */
-
 .button-about-me:hover {
-    background-color: rgb(163, 103, 220) !important;
-    border: solid rgb(197, 145, 245) 2px !important;
+  background-color: rgb(163, 103, 220) !important;
+  border: solid rgb(197, 145, 245) 2px !important;
 }
-
-.arrow-forward-about-me, .arrow-back-about-me {
-    font-size: 50px !important;
-    color: rgb(67, 36, 118) !important;
-    padding: 0 35px !important;
+.arrow-forward-about-me,
+.arrow-back-about-me {
+  font-size: 50px !important;
+  color: rgb(67, 36, 118) !important;
+  padding: 0 35px !important;
 }
-
 .controls {
-    width: 1000px;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px auto 10px auto;
+  width: 1000px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 10px auto;
 }
-
 .about-me-button {
-    margin: 0 40px !important;
-    background-color: rgb(107, 228, 228) !important;
-    border: solid rgb(107, 172, 172) 3px !important;
-    border-radius: 50% !important;
-    width: 30px !important;
-    height: 30px !important;
-    padding: 30px !important;
+  margin: 0 40px !important;
+  background-color: rgb(107, 228, 228) !important;
+  border: solid rgb(107, 172, 172) 3px !important;
+  border-radius: 50% !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 30px !important;
 }
-
 .arrows {
-    font-size: 40px !important;
+  font-size: 40px !important;
 }
-
 .about-me-button:hover {
-    background-color: rgb(163, 103, 220) !important;
-    border: solid rgb(197, 145, 245) 2px !important;
+  background-color: rgb(163, 103, 220) !important;
+  border: solid rgb(197, 145, 245) 2px !important;
 }
-
-

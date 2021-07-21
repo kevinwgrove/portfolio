@@ -1,5 +1,4 @@
 import { EPL_DB_KEY } from "../keys/eplID";
-// import { usePortfolioStore } from "../PortfolioContext";
 
 export const fetchLeagueTable = async () => {
   const result = await fetch(
@@ -35,40 +34,41 @@ export const fetchLeagueTable = async () => {
         },
       }
     );
-    const teamSceduleResult = await teamScedule.json()
+    const teamSceduleResult = await teamScedule.json();
     const teamResults = await fetch(
-        `https://thesportsdb.p.rapidapi.com/eventslast.php?id=${team.teamid}`,
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-key": EPL_DB_KEY,
-            "x-rapidapi-host": "thesportsdb.p.rapidapi.com",
-          },
-        }
-      );
-    const teamResultsResult = await teamResults.json()
+      `https://thesportsdb.p.rapidapi.com/eventslast.php?id=${team.teamid}`,
+      {
+        method: "GET",
+        headers: {
+          "x-rapidapi-key": EPL_DB_KEY,
+          "x-rapidapi-host": "thesportsdb.p.rapidapi.com",
+        },
+      }
+    );
+    const teamResultsResult = await teamResults.json();
     const finalTeam = {
       ...team,
       info: teamInfoResult.teams[0],
       position: index + 1,
       schedule: teamSceduleResult.events,
-      results: teamResultsResult.results
+      results: teamResultsResult.results,
     };
     return finalTeam;
   });
   return Promise.all(table);
-
 };
-
 export const fetchLeague = async () => {
-  const result = await fetch("https://thesportsdb.p.rapidapi.com/lookupleague.php?id=4328", {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-key": EPL_DB_KEY,
-      "x-rapidapi-host": "thesportsdb.p.rapidapi.com"
+  const result = await fetch(
+    "https://thesportsdb.p.rapidapi.com/lookupleague.php?id=4328",
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": EPL_DB_KEY,
+        "x-rapidapi-host": "thesportsdb.p.rapidapi.com",
+      },
     }
-  })
-  const response = await result.json()
+  );
+  const response = await result.json();
   // console.log(response.leagues)
-  return Promise.all(response.leagues)
-}
+  return Promise.all(response.leagues);
+};
