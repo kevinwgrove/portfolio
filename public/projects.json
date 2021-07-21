@@ -1,6 +1,14 @@
 {
     "project": [
         {
+            "name":"Tech Assessment",
+            "address":"https://hatchways-hazel.vercel.app/",
+            "sourcecode": "https://github.com/kevinwgrove/hatchways",
+            "description":"I was tasked to build a student search widget.  This is calling an API to populate the student list, and the user is able to find students based on first name, last name, both first and last names, and also by any tags added to the student.",
+            "stack": ["ReactJS", "Hatchways API", "Material UI"],
+            "photo": "images/Tech-Assessment.png"
+        },
+        {
             "name":"Knowmad",
             "address":"https://www.knowmadapp.com/",
             "sourcecode": "https://gitlab.com/kevinwgrove/nomad",
